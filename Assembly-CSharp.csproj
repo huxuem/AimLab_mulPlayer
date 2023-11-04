@@ -522,6 +522,7 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\LuaDelegate_UnityEngine_Events_UnityAction.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Audio_AudioMixer.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_HideFlags.cs" />
+    <Compile Include="Assets\Scripts\Redray.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_AudioSpeakerMode.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_QualitySettings.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_GraphicsBuffer_IndirectDrawArgs.cs" />
@@ -1110,7 +1111,11 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_FixedJoint2D.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Rendering_SplashScreen.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_MaterialGlobalIlluminationFlags.cs" />
-    <Compile Include="Assets\Scripts\Redray.cs" />
+    <Compile Include="Assets\SciFi Warehouse Kit\Demo\Scripts\PushPhysics.cs" />
+    <Compile Include="Assets\SciFi Warehouse Kit\Demo\Scripts\PlayRandomSound.cs" />
+    <Compile Include="Assets\SciFi Warehouse Kit\Demo\Scripts\MouseComponent.cs" />
+    <Compile Include="Assets\SciFi Warehouse Kit\Demo\Scripts\LightFlicker.cs" />
+    <Compile Include="Assets\SciFi Warehouse Kit\Demo\Scripts\PlayerMovement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Slua\Resources\sprotoparser.txt" />
