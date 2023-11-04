@@ -1,0 +1,7 @@
+回调都在network里，server_rpc
+
+之前一直有个报错，实际上是服务器要求汇报状态时找不到写死的player类。
+处理同步请求的地方在NetworkforLua，sync什么的，
+在global里循环接收服务器发来的包，之前注释掉然后就收不到了
+0
+改了lua_networkforlua里的参数（为了在createplayer中加参数），然后改了network里发过去的网址
