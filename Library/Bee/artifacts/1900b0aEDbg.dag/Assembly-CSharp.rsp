@@ -360,6 +360,7 @@
 "Assets/Scripts/LocalDwarfController.cs"
 "Assets/Scripts/NetworkForCS.cs"
 "Assets/Scripts/NetworkForLua.cs"
+"Assets/Scripts/Redray.cs"
 "Assets/Scripts/RemoteDwarfController.cs"
 "Assets/Scripts/Shoot/Cameraholder.cs"
 "Assets/Scripts/Shoot/Target.cs"

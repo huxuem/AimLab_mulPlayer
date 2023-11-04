@@ -1110,6 +1110,7 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_FixedJoint2D.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Rendering_SplashScreen.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_MaterialGlobalIlluminationFlags.cs" />
+    <Compile Include="Assets\Scripts\Redray.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Slua\Resources\sprotoparser.txt" />
