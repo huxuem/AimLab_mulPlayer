@@ -16,7 +16,7 @@ public class Redray : MonoBehaviour
 
     void Update()
     {
-        ShootLaserFromTargetPosition(transform.position, transform.right, laserLength);
+        ShootLaserFromTargetPosition(transform.position, -transform.up, laserLength);
     }
 
     void ShootLaserFromTargetPosition(Vector3 targetPosition, Vector3 direction, float length)

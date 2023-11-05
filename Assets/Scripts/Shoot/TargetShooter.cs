@@ -13,6 +13,9 @@ public class TargetShooter : MonoBehaviour
     [SerializeField] Material RedMat;
     [SerializeField] Material BlueMat;
 
+    public Cameraholder Cameraholder;
+    public GameObject ready;
+
     private float timer;
 
     private void Start()
@@ -32,12 +35,33 @@ public class TargetShooter : MonoBehaviour
             {
                 animator.SetTrigger("Shoot");
                 Debug.Log(hit.collider.gameObject);
-                Target target = hit.collider.gameObject.GetComponent<Target>();
-                if(target != null )
+                switch(hit.collider.gameObject.name)
                 {
-                    Debug.Log("Hit!");
-                    target.Hit();
+                    case "+":
+                        Cameraholder.DPI += 0.1f;
+                        break;
+                    case "-":
+                        Cameraholder.DPI -= 0.1f;
+                        break;
+                    case "++":
+                        Cameraholder.DPI += 0.5f;
+                        break;
+                    case "--":
+                        Cameraholder.DPI -= 0.5f;
+                        break;
+                    case "Ready£¿":
+                        ready.SetActive(false);
+                        break;
+                    default:
+                        Target target = hit.collider.gameObject.GetComponent<Target>();
+                        if (target != null)
+                        {
+                            Debug.Log("Hit!");
+                            target.Hit();
+                        }
+                        break;
                 }
+
             }
             timer = Time.time;
         }
