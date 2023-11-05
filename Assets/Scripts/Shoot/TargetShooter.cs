@@ -29,7 +29,7 @@ public class TargetShooter : MonoBehaviour
             if(Physics.Raycast(ray,out RaycastHit hit))
             {
                 Debug.Log(hit.collider.gameObject);
-                Target target = hit.collider.gameObject.GetComponent<Target>();
+                Coin target = hit.collider.gameObject.GetComponent<Coin>();
                 if(target != null )
                 {
                     Debug.Log("Hit!");

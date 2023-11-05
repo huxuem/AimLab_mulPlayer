@@ -45,7 +45,7 @@ public class NetworkForLua
         }
 
         Vector3 pos = new Vector3(x, y, z);
-        Debug.Log("SpawnPos: "+pos);
+        //Debug.Log("SpawnPos: "+pos);
 
         // 创建本机玩家
         if (Globals.Instance.DataMgr.CurrentPlayerId == id)
@@ -158,7 +158,7 @@ public class NetworkForLua
         GameObject tempGo;
         if (Globals.Instance.DataMgr.AllBalls.TryGetValue(id, out tempGo))
         {
-            //说明已经存在该value
+            //说明已经存在该value，是有人击中了已有的球
             if (null != tempGo)
             {
                 Debug.Log("TargetID: " + id);
@@ -174,18 +174,20 @@ public class NetworkForLua
                 Debug.Log("对应此id的球引用丢失！");
             }
         }
+        else
+        {
+            Vector3 pos = new Vector3(x, y, z);
+            Debug.Log("SpawnPos: " + pos);
+            var TarPrefab = Resources.Load("NewTarget") as GameObject;
+            var TarGo = Object.Instantiate(TarPrefab, pos, Quaternion.identity);
 
-        Vector3 pos = new Vector3(x, y, z);
-        Debug.Log("SpawnPos: "+pos);
-        var TarPrefab = Resources.Load("NewTarget") as GameObject;
-        var TarGo = Object.Instantiate(TarPrefab, pos, Quaternion.identity);
+            TarGo.transform.name = "Target" + id;
 
-        TarGo.transform.name = "Target" + id;
+            var coin = TarGo.GetComponent<Coin>();
+            coin.Init(id, pickSide);
 
-        var coin = TarGo.GetComponent<Coin>();
-        coin.Init(id, pickSide);
-
-        Globals.Instance.DataMgr.AllBalls.Add(id, TarGo);
+            Globals.Instance.DataMgr.AllBalls.Add(id, TarGo);
+        }
     }
 
     public void RemoveCoinResponse(int id, int pickerPlayerId)
