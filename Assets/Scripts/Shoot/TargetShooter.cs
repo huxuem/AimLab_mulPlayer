@@ -9,12 +9,16 @@ public class TargetShooter : MonoBehaviour
     public int currentPlayerId = -1;
     public int curSide;
     [SerializeField] Camera cam;
+    [SerializeField] Animator animator;
 
     private Renderer renderer;
     [SerializeField] Material RedMat;
     [SerializeField] Material BlueMat;
 
+    public Cameraholder Cameraholder;
+    public GameObject ready;
 
+<<<<<<< HEAD
     #region Variables
 
     [Header("Controller Input")] public bool inputEnabled = true;
@@ -69,6 +73,14 @@ public class TargetShooter : MonoBehaviour
             float waitTime = UnityEngine.Random.Range(0.2f, 0.4f);
             yield return new WaitForSeconds(waitTime);
         }
+=======
+    private float timer;
+
+    private void Start()
+    {
+        timer=Time.time;
+        renderer = GetComponent<Renderer>();
+>>>>>>> 26eea30439c18cdd3a3095377f6dad4d920b741a
     }
 
     // 发送本机玩家状态，要改成只发送旋转
@@ -84,21 +96,54 @@ public class TargetShooter : MonoBehaviour
 #endregion
 
     void Update()
-    {
-        if(Input.GetMouseButtonDown(0))
+    {   
+        
+        if(Input.GetMouseButtonDown(0)&& Time.time>timer+0.1f)
         {
             //Debug.Log("Click");
             Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f));
             if(Physics.Raycast(ray,out RaycastHit hit))
             {
+<<<<<<< HEAD
                 //Debug.Log(hit.collider.gameObject);
                 Coin target = hit.collider.gameObject.GetComponent<Coin>();
                 if(target != null )
                 {
                     //Debug.Log("Hit!");
                     target.Hit();
+=======
+                animator.SetTrigger("Shoot");
+                Debug.Log(hit.collider.gameObject);
+                switch(hit.collider.gameObject.name)
+                {
+                    case "+":
+                        Cameraholder.DPI += 0.1f;
+                        break;
+                    case "-":
+                        Cameraholder.DPI -= 0.1f;
+                        break;
+                    case "++":
+                        Cameraholder.DPI += 0.5f;
+                        break;
+                    case "--":
+                        Cameraholder.DPI -= 0.5f;
+                        break;
+                    case "Ready？":
+                        ready.SetActive(false);
+                        break;
+                    default:
+                        Target target = hit.collider.gameObject.GetComponent<Target>();
+                        if (target != null)
+                        {
+                            Debug.Log("Hit!");
+                            target.Hit();
+                        }
+                        break;
+>>>>>>> 26eea30439c18cdd3a3095377f6dad4d920b741a
                 }
+
             }
+            timer = Time.time;
         }
 
         StoreInput();

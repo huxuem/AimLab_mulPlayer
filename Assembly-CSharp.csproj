@@ -361,6 +361,7 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_FixedUpdate_NewInputFixedUpdate.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Display.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_BoxCollider.cs" />
+    <Compile Include="Assets\SciFi Warehouse Kit\Demo\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\LuaSystem_Action_2_string_bool.cs" />
     <Compile Include="Assets\Invector\Scripts\CharacterController\vThirdPersonAnimator.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Object.cs" />
@@ -400,6 +401,7 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_BodyDof.cs" />
     <Compile Include="Assets\Invector\Scripts\CharacterController\vThirdPersonInput.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Rendering_ReflectionProbeRefreshMode.cs" />
+    <Compile Include="Assets\SciFi Warehouse Kit\Demo\Scripts\PushPhysics.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_GamepadSpeakerOutputType.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Font.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_SceneManagement_CreateSceneParameters.cs" />
@@ -579,6 +581,7 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_MeshFilter.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_AnimatorOverrideController.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_CameraClearFlags.cs" />
+    <Compile Include="Assets\SciFi Warehouse Kit\Demo\Scripts\MouseComponent.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_EarlyUpdate_UpdateStreamingManager.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_EarlyUpdate_PollHtcsPlayerConnection.cs" />
     <Compile Include="Assets\Scripts\Shoot\Target.cs" />
@@ -634,6 +637,7 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_HingeJoint2D.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_CollisionDetectionMode.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_PostLateUpdate_SortingGroupsUpdate.cs" />
+    <Compile Include="Assets\SciFi Warehouse Kit\Demo\Scripts\PlayRandomSound.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Rendering_BatchVisibility.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Rendering_GraphicsDeviceType.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_Update_ScriptRunDelayedDynamicFrameRate.cs" />
@@ -747,6 +751,7 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Camera_StereoscopicEye.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_RectTransform_Edge.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_UI_Scrollbar.cs" />
+    <Compile Include="Assets\SciFi Warehouse Kit\Demo\Scripts\LightFlicker.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_UI_DefaultControls_IFactoryControls.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_FixedUpdate_DirectorFixedUpdate.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Rendering_FormatSwizzle.cs" />
@@ -1112,13 +1117,74 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_FixedJoint2D.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Rendering_SplashScreen.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_MaterialGlobalIlluminationFlags.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
+>>>>>>> 26eea30439c18cdd3a3095377f6dad4d920b741a
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\Slua\Resources\sprotoparser.txt" />
+    <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
     <None Include="Assets\Slua\Resources\sproto.txt" />
+    <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
     <None Include="Assets\Slua\客户端调用顺序.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\Slua\Resources\network.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Slua\Resources\proto.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
+    <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
     <None Include="Assets\Slua\Resources\sprotoloader.txt" />
   </ItemGroup>
   <ItemGroup>
