@@ -71,22 +71,22 @@ public class NetworkForLua
         // 创建其他玩家,TODO:换成自己的！！！！！！！！！！！！
         else
         {
-            var playerPrefab = Resources.Load("RemotePlayer") as GameObject;
-            var cameraPrefab = Resources.Load("DwarfCameraRemote") as GameObject;
+            var playerPrefab = Resources.Load("PlayerRemote") as GameObject;
+            //var cameraPrefab = Resources.Load("DwarfCameraRemote") as GameObject;
 
             var player = Object.Instantiate(playerPrefab, pos, Quaternion.identity);
-            var camera = Object.Instantiate(cameraPrefab, pos, Quaternion.identity);
+            //var camera = Object.Instantiate(cameraPrefab, pos, Quaternion.identity);
 
             if (player == null) Debug.Log("创建玩家失败");
-            if (camera == null) Debug.Log("创建远程玩家相机失败");
+            //if (camera == null) Debug.Log("创建远程玩家相机失败");
 
             player.transform.name = "Dwarf_remote" + id;
-            camera.transform.name = "DwarfCameraRemote" + id;
+            //camera.transform.name = "DwarfCameraRemote" + id;
 
             // 在玩家列表中注册
             Globals.Instance.DataMgr.AllPlayers.Add(id, player);
 
-            var pc = player.GetComponent<RemoteDwarfController>();
+            var pc = player.GetComponent<RemoteShooter>();
             pc.currentPlayerId = id;
             pc.localFrame = Globals.Instance.DataMgr.CurrentFrame;
             pc.serverFrame = Globals.Instance.DataMgr.CurrentFrame;

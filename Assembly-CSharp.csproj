@@ -793,6 +793,7 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_PostLateUpdate_ThreadedLoadingDebug.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Rendering_FilteringSettings.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_EventSystems_IPointerMoveHandler.cs" />
+    <Compile Include="Assets\Scripts\Shoot\RemoteShooter.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\LuaDelegate_UnityEngine_AudioClip_PCMReaderCallback.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_EarlyUpdate_ARCoreUpdate.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_CameraType.cs" />
@@ -1111,7 +1112,6 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_FixedJoint2D.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Rendering_SplashScreen.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_MaterialGlobalIlluminationFlags.cs" />
-    <Compile Include="Assets\Scripts\Shoot\RemoteShooter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Slua\Resources\sprotoparser.txt" />

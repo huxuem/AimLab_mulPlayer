@@ -48,7 +48,7 @@ public class RemoteShooter : MonoBehaviour
     InputActionInfo MyInputAction = new InputActionInfo(0, 0, 0, 0, 0, 0, 0, 0);
 
 
-    [SerializeField] Camera cam;
+    //[SerializeField] Camera cam;
 
     private Renderer renderer;
     [SerializeField] Material RedMat;
