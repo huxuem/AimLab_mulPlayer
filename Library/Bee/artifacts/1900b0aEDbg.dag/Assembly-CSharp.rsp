@@ -363,6 +363,7 @@
 "Assets/Scripts/Redray.cs"
 "Assets/Scripts/RemoteDwarfController.cs"
 "Assets/Scripts/Shoot/Cameraholder.cs"
+"Assets/Scripts/Shoot/RemoteShooter.cs"
 "Assets/Scripts/Shoot/Target.cs"
 "Assets/Scripts/Shoot/TargetBound.cs"
 "Assets/Scripts/Shoot/TargetShooter.cs"

@@ -64,7 +64,7 @@ public class NetworkForLua
             // 在玩家列表中注册
             Globals.Instance.DataMgr.AllPlayers.Add(id, player);
             var pc = player.GetComponent<TargetShooter>();
-            Debug.Log(pc+" "+color);
+            //Debug.Log(pc+" "+color);
             pc.currentPlayerId = id;
             pc.SetColor(color);
         }
@@ -108,15 +108,17 @@ public class NetworkForLua
     }
 
     // 处理其他客户端发来的操作
+    //#############################现在远程没有多少动作，纯靠SnapShot可以解决，这个函数废弃
     public void ActionResponse(int id, int frame, int inputH, int inputV, int inputJump, int inputS, float fx, float fz)
     {
-        // 检查玩家是否存在、是否是其他玩家
-        if (Globals.Instance.DataMgr.AllPlayers.ContainsKey(id) && id != Globals.Instance.DataMgr.CurrentPlayerId)
-        {
-            // 将数据包转交给RemoteDwarfController脚本进行处理
-            var player = Globals.Instance.DataMgr.AllPlayers[id];
-            player.GetComponent<RemoteDwarfController>().AddRemoteAction(id, frame, inputH, inputV, inputJump, inputS, fx, fz);
-        }
+
+        //// 检查玩家是否存在、是否是其他玩家
+        //if (Globals.Instance.DataMgr.AllPlayers.ContainsKey(id) && id != Globals.Instance.DataMgr.CurrentPlayerId)
+        //{
+        //    // 将数据包转交给RemoteDwarfController脚本进行处理
+        //    var player = Globals.Instance.DataMgr.AllPlayers[id];
+        //    player.GetComponent<RemoteShooter>().AddRemoteAction(id, frame, inputH, inputV, inputJump, inputS, fx, fz);
+        //}
     }
 
     // 处理服务器定时发送的全局同步请求
@@ -147,13 +149,13 @@ public class NetworkForLua
         if (Globals.Instance.DataMgr.AllPlayers.ContainsKey(id))
         {
             var player = Globals.Instance.DataMgr.AllPlayers[id];
-            player.GetComponent<RemoteDwarfController>().HandleSnapshot(frame, pos, rot, scl);
+            player.GetComponent<RemoteShooter>().HandleSnapshot(frame, pos, rot, scl);
         }
     }
 
     public void AddCoinResponse(int id, float x, float y, float z, int pickSide)
     {
-        Debug.Log("addCoinStart");
+        //Debug.Log("addCoinStart");
 
         GameObject tempGo;
         if (Globals.Instance.DataMgr.AllBalls.TryGetValue(id, out tempGo))
@@ -161,13 +163,21 @@ public class NetworkForLua
             //说明已经存在该value，是有人击中了已有的球
             if (null != tempGo)
             {
-                Debug.Log("TargetID: " + id);
+                //Debug.Log("TargetID: " + id);
                 //把原有的球改位置，且知道是谁打的
                 Coin tmpCoin = tempGo.GetComponent<Coin>();
                 tmpCoin.changePos(new Vector3(x, y, z));
 
-                if (pickSide == 0) Globals.Instance.DataMgr.BlueScore += 1;
-                else Globals.Instance.DataMgr.RedScore += 1;
+                if (pickSide == 0)
+                {
+                    Globals.Instance.DataMgr.BlueScore += 1;
+                    Debug.Log("BlueScore: "+ Globals.Instance.DataMgr.BlueScore);
+                }
+                else
+                {
+                    Globals.Instance.DataMgr.RedScore += 1;
+                    Debug.Log("RedScore: " + Globals.Instance.DataMgr.RedScore);
+                }
             }
             else
             {
@@ -177,7 +187,7 @@ public class NetworkForLua
         else
         {
             Vector3 pos = new Vector3(x, y, z);
-            Debug.Log("SpawnPos: " + pos);
+            //Debug.Log("SpawnPos: " + pos);
             var TarPrefab = Resources.Load("NewTarget") as GameObject;
             var TarGo = Object.Instantiate(TarPrefab, pos, Quaternion.identity);
 

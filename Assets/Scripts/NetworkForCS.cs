@@ -75,6 +75,7 @@ public class NetworkForCS
     // 发送本机玩家的一帧操作
     public void ActionRequest(int inputH, int inputV, int inputJ, int inputS, float fx, float fz)
     {
+        Debug.Log("ActionRequest");
         luaAction.call(luaSelf, Globals.Instance.DataMgr.CurrentPlayerId, Globals.Instance.DataMgr.CurrentFrame, inputH, inputV, inputJ, inputS, fx, fz);
     }
 
