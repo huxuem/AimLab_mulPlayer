@@ -9,7 +9,10 @@ public class DataMgr
     public string CurrentPlayerName = "";
     public int CurrentPlayerColor;
 
+    public int BlueScore;
+    public int RedScore;
+
     public Dictionary<int, GameObject> AllPlayers = new Dictionary<int, GameObject>();
 
-    public Dictionary<int, GameObject> AllCoins = new Dictionary<int, GameObject>();
+    public Dictionary<int, GameObject> AllBalls = new Dictionary<int, GameObject>();
 }

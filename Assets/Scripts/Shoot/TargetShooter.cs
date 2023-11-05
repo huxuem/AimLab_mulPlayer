@@ -16,7 +16,8 @@ public class TargetShooter : MonoBehaviour
 
     private void Start()
     {
-        renderer = GetComponent<Renderer>();
+        //Debug.Log(transform.GetChild(0)+"########################################");
+        //Debug.Log(renderer);
     }
 
     void Update()
@@ -40,6 +41,19 @@ public class TargetShooter : MonoBehaviour
 
     public void SetColor(int color)
     {
-        renderer.material = color == 0 ? RedMat : BlueMat;
+        //Debug.Log(" color:" + color);
+        //Debug.Log(renderer);
+        //Debug.Log("SetColor: " + renderer.material+" color:"+color);
+        renderer = transform.GetChild(0).GetComponent<Renderer>();
+        //renderer.material = (color == 0 ? RedMat : BlueMat);
+        Debug.Log(renderer.material);
+        if(color == 0)
+        {
+            renderer.material = RedMat;
+        }
+        else
+        {
+            renderer.material = BlueMat;
+        }
     }
 }

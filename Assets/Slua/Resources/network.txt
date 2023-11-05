@@ -139,7 +139,8 @@ local server_rpc = {
 		return true
 	end,
 	add_coin_bc = function(args)
-		network_for_lua:AddCoinResponse(args["id"], args["posx"], args["posy"], args["posz"], args["ownerPlayerId"])
+		--print("args[\"ownSide\"]:"..args["ownSide"])
+		network_for_lua:AddCoinResponse(args["id"], args["posx"], args["posy"], args["posz"], args["ownSide"])
 		return true
 	end,
 	remove_coin_bc = function(args)

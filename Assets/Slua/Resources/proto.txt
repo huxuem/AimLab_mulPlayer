@@ -149,7 +149,7 @@ add_coin_bc    10 {
 		posx 	         1 : double
 		posy 	         2 : double
 		posz             3 : double
-		ownerPlayerId    4 : integer
+		ownSide	4 : integer
 	}
 }
 

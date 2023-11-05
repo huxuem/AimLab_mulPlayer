@@ -11,14 +11,14 @@ public class Gamemanager : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        for (int i = 0; i < Count1; i++)
-        {
-            Instantiate(target, TargetBound.instance.GetRandomPosition(), Quaternion.identity);
-        }
-        for (int i = 0; i < Count2; i++)
-        {
-            Instantiate(faketarget, TargetBound.instance.GetRandomPosition(), Quaternion.identity);
-        }
+        //for (int i = 0; i < Count1; i++)
+        //{
+        //    Instantiate(target, TargetBound.instance.GetRandomPosition(), Quaternion.identity);
+        //}
+        //for (int i = 0; i < Count2; i++)
+        //{
+        //    Instantiate(faketarget, TargetBound.instance.GetRandomPosition(), Quaternion.identity);
+        //}
 
     }
 

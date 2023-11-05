@@ -64,7 +64,7 @@ public class NetworkForLua
             // 在玩家列表中注册
             Globals.Instance.DataMgr.AllPlayers.Add(id, player);
             var pc = player.GetComponent<TargetShooter>();
-            Debug.Log(pc);
+            Debug.Log(pc+" "+color);
             pc.currentPlayerId = id;
             pc.SetColor(color);
         }
@@ -151,45 +151,55 @@ public class NetworkForLua
         }
     }
 
-    public void AddCoinResponse(int id, float x, float y, float z, int ownerPlayerId)
+    public void AddCoinResponse(int id, float x, float y, float z, int pickSide)
     {
+        Debug.Log("addCoinStart");
+
         GameObject tempGo;
-        if (Globals.Instance.DataMgr.AllCoins.TryGetValue(id, out tempGo))
+        if (Globals.Instance.DataMgr.AllBalls.TryGetValue(id, out tempGo))
         {
+            //说明已经存在该value
             if (null != tempGo)
             {
-                return;
+                Debug.Log("TargetID: " + id);
+                //把原有的球改位置，且知道是谁打的
+                Coin tmpCoin = tempGo.GetComponent<Coin>();
+                tmpCoin.changePos(new Vector3(x, y, z));
+
+                if (pickSide == 0) Globals.Instance.DataMgr.BlueScore += 1;
+                else Globals.Instance.DataMgr.RedScore += 1;
             }
             else
             {
-                Globals.Instance.DataMgr.AllCoins.Remove(id);
+                Debug.Log("对应此id的球引用丢失！");
             }
         }
 
         Vector3 pos = new Vector3(x, y, z);
-        var coinPrefab = Resources.Load("Coin") as GameObject;
-        var coinGo = Object.Instantiate(coinPrefab, pos, Quaternion.identity);
+        Debug.Log("SpawnPos: "+pos);
+        var TarPrefab = Resources.Load("NewTarget") as GameObject;
+        var TarGo = Object.Instantiate(TarPrefab, pos, Quaternion.identity);
 
-        coinGo.transform.name = "Coin" + id;
+        TarGo.transform.name = "Target" + id;
 
-        var coin = coinGo.GetComponent<Coin>();
-        coin.Init(id, ownerPlayerId);
+        var coin = TarGo.GetComponent<Coin>();
+        coin.Init(id, pickSide);
 
-        Globals.Instance.DataMgr.AllCoins.Add(id, coinGo);
+        Globals.Instance.DataMgr.AllBalls.Add(id, TarGo);
     }
 
     public void RemoveCoinResponse(int id, int pickerPlayerId)
     {
-        GameObject tempGo;
-        if (Globals.Instance.DataMgr.AllCoins.TryGetValue(id, out tempGo))
-        {
-            Globals.Instance.DataMgr.AllCoins.Remove(id);
+        //GameObject tempGo;
+        //if (Globals.Instance.DataMgr.AllCoins.TryGetValue(id, out tempGo))
+        //{
+        //    Globals.Instance.DataMgr.AllCoins.Remove(id);
 
-            if (null != tempGo)
-            {
-                Object.Destroy(tempGo);
-            }
-        }
+        //    if (null != tempGo)
+        //    {
+        //        Object.Destroy(tempGo);
+        //    }
+        //}
     }
 
 }
