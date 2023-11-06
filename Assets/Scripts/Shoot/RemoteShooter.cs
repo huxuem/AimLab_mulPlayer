@@ -90,7 +90,7 @@ public class RemoteShooter : MonoBehaviour
         Debug.Log("RemoteAction get");
         // 人物缩放比例
         transform.localScale = scl;
-        transform.rotation = rot;
+        transform.rotation = Quaternion.Slerp(Quaternion.identity, rot, 0.9f);
     }
 
     public void AddRemoteAction(int id, int frame, int h, int v, int jump, int sprint, float fx, float fz)

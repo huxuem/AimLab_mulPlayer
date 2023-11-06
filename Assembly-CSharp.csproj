@@ -393,6 +393,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_GL.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Rendering_RasterState.cs" />
+    <Compile Include="Assets\Scripts\Coin_Bad.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_EarlyUpdate_SpriteAtlasManagerUpdate.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_EarlyUpdate_GpuTimestamp.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Rendering_ShaderKeywordType.cs" />
@@ -1151,7 +1152,6 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_FixedJoint2D.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Rendering_SplashScreen.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_MaterialGlobalIlluminationFlags.cs" />
-    <Compile Include="Assets\Scripts\Coin_Bad.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -223,8 +223,8 @@ function class:send_add_coin_req(x, y, z, ownerId)
 	send_request("add_coin_req", { posx = x, posy = y, posz = z, ownerPlayerId = ownerId })
 end
 
-function class:send_remove_coin_req(i, pickerId, isGood)
-	send_request("remove_coin_req", { id = i, pickerPlayerId = pickerId, isgood = isGood})
+function class:send_remove_coin_req(i, pickerColor, isGood)
+	send_request("remove_coin_req", { id = i, pickerPlayerColor = pickerColor, isgood = isGood})
 end
 
 -------------------------------------

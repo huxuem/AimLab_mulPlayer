@@ -17,6 +17,7 @@ public class NetworkForLua
         Globals.Instance.DataMgr.CurrentPlayerId = id;
         Globals.Instance.DataMgr.CurrentPlayerName = currentPlayerName;
         Globals.Instance.DataMgr.CurrentPlayerColor = color;
+        Debug.Log("Color:" + color);
 
         if (id != -1)
         {
@@ -45,14 +46,14 @@ public class NetworkForLua
         }
 
         Vector3 pos = new Vector3(x, y, z);
-        //Debug.Log("SpawnPos: "+pos);
+        Transform Ready = GameObject.Find("Ready").transform;
 
         // 创建本机玩家
         if (Globals.Instance.DataMgr.CurrentPlayerId == id)
         {
             // 创建物体
             var playerPrefab = Resources.Load("Player") as GameObject;
-            var player = Object.Instantiate(playerPrefab, pos, Quaternion.Euler(new Vector3(0, 90, 0)));
+            var player = Object.Instantiate(playerPrefab, pos, Quaternion.identity);
             if (player == null)
             {
                 Debug.Log("创建玩家失败");
@@ -60,6 +61,7 @@ public class NetworkForLua
             }
 
             player.transform.name = "Player_local";
+            player.transform.LookAt(Ready);
 
             // 在玩家列表中注册
             Globals.Instance.DataMgr.AllPlayers.Add(id, player);
@@ -68,25 +70,22 @@ public class NetworkForLua
             pc.currentPlayerId = id;
             pc.SetColor(color);
         }
-        // 创建其他玩家,TODO:换成自己的！！！！！！！！！！！！
+        // 创建其他玩家
         else
         {
             var playerPrefab = Resources.Load("PlayerRemote") as GameObject;
-            //var cameraPrefab = Resources.Load("DwarfCameraRemote") as GameObject;
 
-            var player = Object.Instantiate(playerPrefab, pos, Quaternion.identity);
-            //var camera = Object.Instantiate(cameraPrefab, pos, Quaternion.identity);
+            var player1 = Object.Instantiate(playerPrefab, pos, Quaternion.identity);
 
-            if (player == null) Debug.Log("创建玩家失败");
-            //if (camera == null) Debug.Log("创建远程玩家相机失败");
+            if (player1 == null) Debug.Log("创建玩家失败");
 
-            player.transform.name = "Dwarf_remote" + id;
-            //camera.transform.name = "DwarfCameraRemote" + id;
+            player1.transform.name = "Player_remote" + id;
+            player1.transform.LookAt(Ready);
 
             // 在玩家列表中注册
-            Globals.Instance.DataMgr.AllPlayers.Add(id, player);
+            Globals.Instance.DataMgr.AllPlayers.Add(id, player1);
 
-            var pc = player.GetComponent<RemoteShooter>();
+            var pc = player1.GetComponent<RemoteShooter>();
             pc.currentPlayerId = id;
             pc.localFrame = Globals.Instance.DataMgr.CurrentFrame;
             pc.serverFrame = Globals.Instance.DataMgr.CurrentFrame;
@@ -160,10 +159,10 @@ public class NetworkForLua
         GameObject tempGo;
         if (Globals.Instance.DataMgr.AllBalls.TryGetValue(id, out tempGo))
         {
-            //说明已经存在该value，是有人击中了已有的球
+            //说明已经存在该value，是有人击中了已有的球。也可能是同步了已有的球，但那时pickside就==2了
             if (null != tempGo)
             {
-                //Debug.Log("TargetID: " + id);
+                Debug.Log("TargetID: " + id);
                 //把原有的球改位置，且知道是谁打的
 
                 if (pickSide == 0)
@@ -183,7 +182,7 @@ public class NetworkForLua
                     Debug.Log("BlueScore: " + Globals.Instance.DataMgr.BlueScore);
 
                 }
-                else
+                else if(pickSide == 1)
                 {
                     if (isGood == 1)
                     {
@@ -199,10 +198,6 @@ public class NetworkForLua
                     }
                     Debug.Log("RedScore: " + Globals.Instance.DataMgr.RedScore);
                 }
-            }
-            else
-            {
-                Debug.Log("对应此id的球引用丢失！");
             }
         }
         else

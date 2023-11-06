@@ -57,7 +57,7 @@ add_coin_req    7 {
 remove_coin_req  8 {
 	request {
 		id               0 : integer
-		pickerPlayerId   1 : integer
+		pickerPlayerColor   1 : integer
 		isgood		2 : integer
 	}
 }

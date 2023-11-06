@@ -121,32 +121,26 @@ public class TargetShooter : MonoBehaviour
 
                 //这里用的是target而非coin，暂时锁掉
 
-                //switch(hit.collider.gameObject.name)
-                //{
-                //    case "+":
-                //        Cameraholder.DPI += 0.1f;
-                //        break;
-                //    case "-":
-                //        Cameraholder.DPI -= 0.1f;
-                //        break;
-                //    case "++":
-                //        Cameraholder.DPI += 0.5f;
-                //        break;
-                //    case "--":
-                //        Cameraholder.DPI -= 0.5f;
-                //        break;
-                //    case "Ready？":
-                //        ready.SetActive(false);
-                //        break;
-                //    default:
-                //        Target target = hit.collider.gameObject.GetComponent<Target>();
-                //        if (target != null)
-                //        {
-                //            //Debug.Log("Hit!");
-                //            target.Hit();
-                //        }
-                //        break;
-                //}
+                switch (hit.collider.gameObject.name)
+                {
+                    case "+":
+                        Cameraholder.DPI += 0.1f;
+                        break;
+                    case "-":
+                        Cameraholder.DPI -= 0.1f;
+                        break;
+                    case "++":
+                        Cameraholder.DPI += 0.5f;
+                        break;
+                    case "--":
+                        Cameraholder.DPI -= 0.5f;
+                        break;
+                    case "Ready":
+                        //ready.SetActive(false);
+                        break;
+                    default: break;
+                }
+                //Debug.Log("DPI:" + Cameraholder.DPI);
 
             }
             timer = Time.time;
