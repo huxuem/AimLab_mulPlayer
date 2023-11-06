@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TargetShooter : MonoBehaviour
@@ -14,7 +15,7 @@ public class TargetShooter : MonoBehaviour
     [SerializeField] Material BlueMat;
 
     public Cameraholder Cameraholder;
-    public GameObject ready;
+    public GameObject ready,gameover,newHits;
 
     private float timer;
 
@@ -52,12 +53,21 @@ public class TargetShooter : MonoBehaviour
                     case "Ready£¿":
                         ready.SetActive(false);
                         break;
+                    case "Gameover":
+                        Application.Quit();
+                        break;
+                    case "Tryagain":
+                        gameover.SetActive(false);
+                        ready.SetActive(true);
+                        break;
                     default:
                         Target target = hit.collider.gameObject.GetComponent<Target>();
                         if (target != null)
                         {
                             Debug.Log("Hit!");
                             target.Hit();
+                            GameObject spawnedHit=Instantiate(newHits, hit.point, Quaternion.identity);
+                            spawnedHit.transform.LookAt(Camera.main.transform);
                         }
                         break;
                 }

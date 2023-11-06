@@ -92,6 +92,7 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Application.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_PreUpdate.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_UI_Image_Origin90.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PointEffector2D.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Rendering_RenderBufferLoadAction.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_CollisionDetectionMode2D.cs" />
@@ -108,6 +109,7 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_UI_Image_Origin360.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_EventSystems_UIBehaviour.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Animations_AnimationMixerPlayable.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_SpriteMeshType.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_U2D_SpriteBone.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_EventSystems_IInitializePotentialDragHandler.cs" />
@@ -198,6 +200,7 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_AvatarBuilder.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_ContactPoint.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_AsyncOperation.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Avatar.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_EventSystems_PointerEventData_FramePressState.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_EventSystems_Physics2DRaycaster.cs" />
@@ -221,6 +224,7 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Rendering_RenderQueueRange.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Mathf.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_SceneManagement_LoadSceneMode.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\LuaUnityEngine_EventSystems_ExecuteEvents_EventFunction_1_UnityEngine_EventSystems_IDeselectHandler.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_UI_ContentSizeFitter.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Rendering_PassIdentifier.cs" />
@@ -279,6 +283,7 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_LOD.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_PostLateUpdate_UpdateAudio.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\LuaUnityEngine_EventSystems_ExecuteEvents_EventFunction_1_UnityEngine_EventSystems_IPointerMoveHandler.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Rendering_ShaderPropertyFlags.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\LuaSystem_Func_1_bool.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Events_PersistentListenerMode.cs" />
@@ -290,6 +295,7 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_PostLateUpdate_UpdateRectTransform.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Rendering_SortingCriteria.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Rendering_ShaderPropertyType.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_ScaleMode.cs" />
     <Compile Include="Assets\Invector\Scripts\Generic\Utils\vComment.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_UIElements_PanelEventHandler.cs" />
@@ -341,11 +347,13 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_WWWForm.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_RenderParams.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_MeshCollider.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_CubemapFace.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_AudioDataLoadState.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Animations_PropertyStreamHandle.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Rendering_CameraEvent.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Vector3.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_RigidbodyConstraints.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_BoxcastCommand.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_JetBrains_Annotations_AssertionConditionType.cs" />
@@ -382,6 +390,7 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Caching.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_EventSystems_EventTrigger_TriggerEvent.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_PreLateUpdate_EndGraphicsJobsAfterScriptUpdate.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_GL.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Rendering_RasterState.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_EarlyUpdate_SpriteAtlasManagerUpdate.cs" />
@@ -402,12 +411,14 @@
     <Compile Include="Assets\Invector\Scripts\CharacterController\vThirdPersonInput.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Rendering_ReflectionProbeRefreshMode.cs" />
     <Compile Include="Assets\SciFi Warehouse Kit\Demo\Scripts\PushPhysics.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_GamepadSpeakerOutputType.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Font.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_SceneManagement_CreateSceneParameters.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_RenderTextureFormat.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_ContactFilter2D.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_HumanLimit.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_TextAsset.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_Unity_Rendering_HybridV2_DOTSInstancingProperty.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Ray.cs" />
@@ -463,6 +474,7 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_EventSystems_PointerEventData_InputButton.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PrimitiveType.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_HashUtilities.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_CrashReport.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\LuaSystem_Action_1_UnityEngine_Rendering_AsyncGPUReadbackRequest.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\LuaUnityEngine_EventSystems_ExecuteEvents_EventFunction_1_UnityEngine_EventSystems_IEventSystemHandler.cs" />
@@ -507,6 +519,7 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_PostLateUpdate_UpdateCustomRenderTextures.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Profiling_Memory_Experimental_MemoryProfiler.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_UI_InputField.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_FixedUpdate_Physics2DFixedUpdate.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Texture3D.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_PostLateUpdate_PresentAfterDraw.cs" />
@@ -526,9 +539,11 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_HideFlags.cs" />
     <Compile Include="Assets\Scripts\Redray.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_AudioSpeakerMode.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_QualitySettings.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_GraphicsBuffer_IndirectDrawArgs.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Rendering_SynchronisationStage.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_PostLateUpdate_UpdateVideoTextures.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_AudioCompressionFormat.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_SpritePackingMode.cs" />
@@ -536,6 +551,7 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_JointMotor.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Sprite.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_ColliderErrorState2D.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Rendering_BatchRendererGroup.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_BuoyancyEffector2D.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_BillboardAsset.cs" />
@@ -550,6 +566,7 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_UI_InputField_InputType.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_SpriteAlignment.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_OcclusionPortal.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_RenderSettings.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_EarlyUpdate_UpdateAsyncReadbackManager.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_Update.cs" />
@@ -583,6 +600,7 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_CameraClearFlags.cs" />
     <Compile Include="Assets\SciFi Warehouse Kit\Demo\Scripts\MouseComponent.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_EarlyUpdate_UpdateStreamingManager.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_EarlyUpdate_PollHtcsPlayerConnection.cs" />
     <Compile Include="Assets\Scripts\Shoot\Target.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_ArticulationJointType.cs" />
@@ -609,6 +627,7 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_RectTransform.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_JointProjectionMode.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\LuaSystem_Func_2_UnityEngine_UI_ILayoutElement_float.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_SceneManagement_UnloadSceneOptions.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Random_State.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_ResourcesAPI.cs" />
@@ -628,6 +647,7 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_ContactPoint2D.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_CapsuleCollider.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Assertions_AssertionException.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_PostLateUpdate_UpdateSubstance.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Animations_AnimationScriptPlayable.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Events_UnityEventBase.cs" />
@@ -653,6 +673,7 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_RaycastHit2D.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_EarlyUpdate_PollPlayerConnection.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_WebCamTexture.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Rendering_LocalKeyword.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\LuaDelegate_UnityEngine_Font_FontTextureRebuildCallback.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Rendering_DepthState.cs" />
@@ -713,6 +734,7 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Rendering_AsyncGPUReadback.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Assertions_Comparers_FloatComparer.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_UI_Outline.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Audio_AudioPlayableBinding.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Rendering_RenderBufferStoreAction.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_VerticalWrapMode.cs" />
@@ -736,6 +758,7 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_ModifiableContactPair.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_QueryTriggerInteraction.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_FixedUpdate_XRFixedUpdate.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Physics2D.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_ImagePosition.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_EarlyUpdate_ScriptRunDelayedStartupFrame.cs" />
@@ -785,6 +808,7 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_ArticulationReducedSpace.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Rendering_DistanceMetric.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_PreUpdate_AIUpdate.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_RigidbodyInterpolation.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_MissingComponentException.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_TimeUpdate_WaitForLastPresentationAndUpdateTime.cs" />
@@ -835,6 +859,7 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_PostLateUpdate_BatchModeUpdate.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_PostLateUpdate_PlayerSendFrameStarted.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_CloudStreaming.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Rendering_RenderPipelineGlobalSettings.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_TextAnchor.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_GameObject.cs" />
@@ -886,6 +911,7 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_ReceiveGI.cs" />
     <Compile Include="Assets\Invector\Scripts\Generic\Utils\vExtensions.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_EventSystems_PointerEventData.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_UI_PositionAsUV1.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_PreUpdate_WindUpdate.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Rendering_RendererUtils_RendererListDesc.cs" />
@@ -905,6 +931,7 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_AnimatorUtility.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_TexGenMode.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_RuntimeAnimatorController.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_UILineInfo.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_EarlyUpdate_UpdateMainGameViewRect.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_FixedUpdate_AudioFixedUpdate.cs" />
@@ -924,6 +951,7 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\LuaUnityEngine_EventSystems_ExecuteEvents_EventFunction_1_UnityEngine_EventSystems_IPointerDownHandler.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_EarlyUpdate_UpdateAutoStreamer.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_UI_GridLayoutGroup.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Rendering_RenderingThreadingMode.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Shader.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Quaternion.cs" />
@@ -1028,11 +1056,13 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_AnimationBlendMode.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_EarlyUpdate_PlayerCleanupCachedData.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_PreLateUpdate_DirectorUpdateAnimationBegin.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Animation.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Snapping.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_RectTransformUtility.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_AudioEchoFilter.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Rendering_StencilOp.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_SecondarySpriteTexture.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_UI_InputField_CharacterValidation.cs" />
     <Compile Include="Assets\Scripts\Shoot\TargetShooter.cs" />
@@ -1040,6 +1070,7 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PhysicMaterialCombine.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Rendering_DrawingSettings.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_UI_InputField_LineType.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Rendering_GizmoSubset.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_WaitForSeconds.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_EventSystems_EventHandle.cs" />
@@ -1048,6 +1079,7 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Rendering_SynchronisationStageFlags.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_TestTools_CoveredSequencePoint.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_RangeInt.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_AudioVelocityUpdateMode.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_WebCamDevice.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Mesh_MeshData.cs" />
@@ -1057,6 +1089,7 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_ComputeBufferType.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_FindObjectsSortMode.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_LODGroup.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_Initialization_DirectorSampleTime.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_AnimationState.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_AudioReverbFilter.cs" />
@@ -1102,6 +1135,7 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_EventSystems_IPointerExitHandler.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\LuaUnityEvent_string.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_LowLevel_PlayerLoopSystem.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_AudioReverbZone.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_EarlyUpdate_RendererNotifyInvisible.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Behaviour.cs" />
@@ -1116,40 +1150,7 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_FixedJoint2D.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Rendering_SplashScreen.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_MaterialGlobalIlluminationFlags.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
-    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
+    <Compile Include="Assets\Travis Game Assets\Hit Impact Effects\Demo Scene\Scripts\HitImpactEffectsPreview.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -1163,6 +1164,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\Travis Game Assets\Hit Impact Effects\Readme.txt" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
