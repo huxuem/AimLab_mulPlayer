@@ -140,7 +140,7 @@ local server_rpc = {
 	end,
 	add_coin_bc = function(args)
 		--print("args[\"ownSide\"]:"..args["ownSide"])
-		network_for_lua:AddCoinResponse(args["id"], args["posx"], args["posy"], args["posz"], args["ownSide"])
+		network_for_lua:AddCoinResponse(args["id"], args["posx"], args["posy"], args["posz"], args["ownSide"], args["isgood"])
 		return true
 	end,
 	remove_coin_bc = function(args)
@@ -223,8 +223,8 @@ function class:send_add_coin_req(x, y, z, ownerId)
 	send_request("add_coin_req", { posx = x, posy = y, posz = z, ownerPlayerId = ownerId })
 end
 
-function class:send_remove_coin_req(i, pickerId)
-	send_request("remove_coin_req", { id = i, pickerPlayerId = pickerId })
+function class:send_remove_coin_req(i, pickerId, isGood)
+	send_request("remove_coin_req", { id = i, pickerPlayerId = pickerId, isgood = isGood})
 end
 
 -------------------------------------

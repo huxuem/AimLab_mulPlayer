@@ -5,11 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Projectile
-  - Ball
   - Crystals
   - CrystalGroup
   - AIG1
   - Turret
+  - TargetGood
+  - TargetBad
   layers:
   - Default
   - TransparentFX

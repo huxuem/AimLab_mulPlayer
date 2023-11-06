@@ -52,7 +52,7 @@ public class NetworkForLua
         {
             // 创建物体
             var playerPrefab = Resources.Load("Player") as GameObject;
-            var player = Object.Instantiate(playerPrefab, pos, Quaternion.identity);
+            var player = Object.Instantiate(playerPrefab, pos, Quaternion.Euler(new Vector3(0, 90, 0)));
             if (player == null)
             {
                 Debug.Log("创建玩家失败");
@@ -153,7 +153,7 @@ public class NetworkForLua
         }
     }
 
-    public void AddCoinResponse(int id, float x, float y, float z, int pickSide)
+    public void AddCoinResponse(int id, float x, float y, float z, int pickSide, int isGood)
     {
         //Debug.Log("addCoinStart");
 
@@ -165,17 +165,38 @@ public class NetworkForLua
             {
                 //Debug.Log("TargetID: " + id);
                 //把原有的球改位置，且知道是谁打的
-                Coin tmpCoin = tempGo.GetComponent<Coin>();
-                tmpCoin.changePos(new Vector3(x, y, z));
 
                 if (pickSide == 0)
                 {
-                    Globals.Instance.DataMgr.BlueScore += 1;
-                    Debug.Log("BlueScore: "+ Globals.Instance.DataMgr.BlueScore);
+                    if(isGood == 1)
+                    {
+                        Coin tmpCoin = tempGo.GetComponent<Coin>();
+                        tmpCoin.changePos(new Vector3(x, y, z));
+                        Globals.Instance.DataMgr.BlueScore += 1;
+                    }
+                    else if(isGood == 0)
+                    {
+                        Coin_Bad tmpCoinBad = tempGo.GetComponent<Coin_Bad>();
+                        tmpCoinBad.changePos(new Vector3(x, y, z));
+                        Globals.Instance.DataMgr.BlueScore -= 1;
+                    }
+                    Debug.Log("BlueScore: " + Globals.Instance.DataMgr.BlueScore);
+
                 }
                 else
                 {
-                    Globals.Instance.DataMgr.RedScore += 1;
+                    if (isGood == 1)
+                    {
+                        Coin tmpCoin = tempGo.GetComponent<Coin>();
+                        tmpCoin.changePos(new Vector3(x, y, z));
+                        Globals.Instance.DataMgr.RedScore += 1;
+                    }
+                    else if (isGood == 0)
+                    {
+                        Coin_Bad tmpCoinBad = tempGo.GetComponent<Coin_Bad>();
+                        tmpCoinBad.changePos(new Vector3(x, y, z));
+                        Globals.Instance.DataMgr.RedScore -= 1;
+                    }
                     Debug.Log("RedScore: " + Globals.Instance.DataMgr.RedScore);
                 }
             }
@@ -187,16 +208,32 @@ public class NetworkForLua
         else
         {
             Vector3 pos = new Vector3(x, y, z);
-            //Debug.Log("SpawnPos: " + pos);
-            var TarPrefab = Resources.Load("NewTarget") as GameObject;
-            var TarGo = Object.Instantiate(TarPrefab, pos, Quaternion.identity);
+            //Debug.Log("BallPos: " + pos);
 
-            TarGo.transform.name = "Target" + id;
+            //真target假target分开处理
+            if(isGood == 1)
+            {
+                var TarPrefab = Resources.Load("NewTarget") as GameObject;
+                var TarGo = Object.Instantiate(TarPrefab, pos, Quaternion.identity);
 
-            var coin = TarGo.GetComponent<Coin>();
-            coin.Init(id, pickSide);
+                TarGo.transform.name = "Target" + id;
 
-            Globals.Instance.DataMgr.AllBalls.Add(id, TarGo);
+                var coin = TarGo.GetComponent<Coin>();
+                coin.Init(id, pickSide);
+                Globals.Instance.DataMgr.AllBalls.Add(id, TarGo);
+            }
+            else
+            {
+                var TarPrefab = Resources.Load("NewFakeTarget") as GameObject;
+                var TarGo = Object.Instantiate(TarPrefab, pos, Quaternion.identity);
+
+                TarGo.transform.name = "FakeTarget" + id;
+
+                var coin = TarGo.GetComponent<Coin_Bad>();
+                coin.Init(id, pickSide);
+                Globals.Instance.DataMgr.AllBalls.Add(id, TarGo);
+            }
+
         }
     }
 

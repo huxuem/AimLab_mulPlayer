@@ -9,17 +9,18 @@ public class Cameraholder : MonoBehaviour
     float verticalLookRotation;
     float horizontalLookRotation;
     public float DPI;
-    public GameObject readytext;
+    [SerializeField] private GameObject Ready;
     // Start is called before the first frame update
     void Start()
     {
+        Ready = GameObject.Find("Ready");
         DPI = 1f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        readytext.GetComponent<TextMeshPro>().text = "DPI:"+DPI.ToString()+"\r\nShoot this to start!";
+        Ready.GetComponentInChildren<TextMeshPro>().text = "DPI:"+DPI.ToString()+"\r\nShoot this to start!";
         if (DPI<0)
         {
             DPI = 0.01f;

@@ -185,7 +185,9 @@ public class Lua_NetworkForLua : LuaObject {
 			checkType(l,5,out a4);
 			System.Int32 a5;
 			checkType(l,6,out a5);
-			self.AddCoinResponse(a1,a2,a3,a4,a5);
+            System.Int32 a6;
+            checkType(l, 7, out a6);
+            self.AddCoinResponse(a1,a2,a3,a4,a5,a6);
 			pushValue(l,true);
 			return 1;
 		}

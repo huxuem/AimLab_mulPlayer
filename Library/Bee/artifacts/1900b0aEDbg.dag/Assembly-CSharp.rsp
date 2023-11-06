@@ -359,6 +359,7 @@
 "Assets/SciFi Warehouse Kit/Demo/Scripts/PlayRandomSound.cs"
 "Assets/SciFi Warehouse Kit/Demo/Scripts/PushPhysics.cs"
 "Assets/Scripts/Coin.cs"
+"Assets/Scripts/Coin_Bad.cs"
 "Assets/Scripts/DataMgr.cs"
 "Assets/Scripts/Gamemanager.cs"
 "Assets/Scripts/Globals.cs"

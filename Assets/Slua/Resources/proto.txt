@@ -58,6 +58,7 @@ remove_coin_req  8 {
 	request {
 		id               0 : integer
 		pickerPlayerId   1 : integer
+		isgood		2 : integer
 	}
 }
 
@@ -149,7 +150,8 @@ add_coin_bc    10 {
 		posx 	         1 : double
 		posy 	         2 : double
 		posz             3 : double
-		ownSide	4 : integer
+		ownSide    4 : integer
+		isgood		5 : integer
 	}
 }
 
@@ -157,6 +159,7 @@ remove_coin_bc    11 {
 	request {
 		id               0 : integer
 		pickerPlayerId   1 : integer
+		isgood		2 : integer
 	}
 }
 

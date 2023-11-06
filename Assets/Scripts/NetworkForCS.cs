@@ -100,8 +100,8 @@ public class NetworkForCS
         luaAddCoinReq.call(luaSelf, pos[0], pos[1] + 1, pos[2], Globals.Instance.DataMgr.CurrentPlayerId);
     }
 
-    public void RemoveCoinReq(int id)
+    public void RemoveCoinReq(int id, int isGood)
     {
-        luaRemoveCoinReq.call(luaSelf, id, Globals.Instance.DataMgr.CurrentPlayerId);
+        luaRemoveCoinReq.call(luaSelf, id, Globals.Instance.DataMgr.CurrentPlayerId, isGood);
     }
 }
