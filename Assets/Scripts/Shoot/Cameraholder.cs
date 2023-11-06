@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Cameraholder : MonoBehaviour
 {
-    [SerializeField] Transform cameraHolder;
+    public Transform cameraHolder;
     float verticalLookRotation;
     float horizontalLookRotation;
     public float DPI;

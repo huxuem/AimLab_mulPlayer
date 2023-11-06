@@ -119,13 +119,7 @@ local server_rpc = {
 			args["info"][1],
 			args["info"][2],
 			args["info"][3],
-			args["info"][4],
-			args["info"][5],
-			args["info"][6],
-			args["info"][7],
-			args["info"][8],
-			args["info"][9],
-			args["info"][10]
+			args["info"][4]
 		)
 		return true
 	end,
@@ -215,8 +209,8 @@ function class:send_action(i, fa, h, v, j, s, fx, fz)
 	send_request("action", { id = i, frame = fa, input = { h, v, j, s }, facing = { fx, fz } })
 end
 
-function class:send_snapshot(i, f, p1, p2, p3, r1, r2, r3, r4, s1, s2, s3)
-	send_request("snapshoot", { id = i, frame = f, info = { p1, p2, p3, r1, r2, r3, r4, s1, s2, s3 } })
+function class:send_snapshot(i, f, r1, r2, r3, r4)
+	send_request("snapshoot", { id = i, frame = f, info = { r1, r2, r3, r4} })
 end
 
 function class:send_add_coin_req(x, y, z, ownerId)

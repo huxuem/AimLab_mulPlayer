@@ -10,6 +10,7 @@ public class TargetShooter : MonoBehaviour
     public int curSide;
     [SerializeField] Camera cam;
     [SerializeField] Animator animator;
+    private Cameraholder cameraholder;
     private float timer;
 
     private Renderer renderer;
@@ -58,6 +59,7 @@ public class TargetShooter : MonoBehaviour
     private void Start()
     {
         ResetFixInput();
+        cameraholder = this.GetComponent<Cameraholder>();
         StartCoroutine(AutoSnapshot());
         //Debug.Log(transform.GetChild(0)+"########################################");
         //Debug.Log(renderer);
@@ -70,7 +72,7 @@ public class TargetShooter : MonoBehaviour
         {
             // SendLocalSnapshot();
             SendSnapshot();
-            float waitTime = UnityEngine.Random.Range(0.2f, 0.4f);
+            float waitTime = UnityEngine.Random.Range(0.1f, 0.3f);
             yield return new WaitForSeconds(waitTime);
         }
     }
@@ -78,12 +80,10 @@ public class TargetShooter : MonoBehaviour
 
     // 发送本机玩家状态，要改成只发送旋转
     void SendSnapshot()
-    {
-        Vector3 pos = transform.position;
-        Quaternion rot = transform.rotation;
-        Vector3 scl = transform.localScale;
+    {   
+        Quaternion rot = cameraholder.cameraHolder.transform.rotation;
 
-        Globals.Instance.NetworkForCS.SnapshotRequest(localFrame, pos, rot, scl);
+        Globals.Instance.NetworkForCS.SnapshotRequest(localFrame, rot);
     }
 
 #endregion
@@ -159,11 +159,11 @@ public class TargetShooter : MonoBehaviour
         //Debug.Log(renderer.material);
         if(color == 0)
         {
-            renderer.material = RedMat;
+            renderer.material = BlueMat;
         }
         else
         {
-            renderer.material = BlueMat;
+            renderer.material = RedMat;
         }
     }
 

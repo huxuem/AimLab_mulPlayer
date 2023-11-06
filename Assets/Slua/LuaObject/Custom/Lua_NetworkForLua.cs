@@ -150,19 +150,8 @@ public class Lua_NetworkForLua : LuaObject {
 			checkType(l,6,out a5);
 			System.Double a6;
 			checkType(l,7,out a6);
-			System.Double a7;
-			checkType(l,8,out a7);
-			System.Double a8;
-			checkType(l,9,out a8);
-			System.Double a9;
-			checkType(l,10,out a9);
-			System.Double a10;
-			checkType(l,11,out a10);
-			System.Double a11;
-			checkType(l,12,out a11);
-			System.Double a12;
-			checkType(l,13,out a12);
-			self.SnapshotResponse(a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12);
+
+			self.SnapshotResponse(a1,a2,a3,a4,a5,a6);
 			pushValue(l,true);
 			return 1;
 		}

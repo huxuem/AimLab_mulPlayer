@@ -80,17 +80,17 @@ public class NetworkForCS
     }
 
     // 发送本机玩家的一帧状态
-    public void SnapshotRequest(int frame, Vector3 pos, Quaternion rot, Vector3 scl)
+    public void SnapshotRequest(int frame, Quaternion rot)
     {
         luaSnapshot.call(luaSelf, Globals.Instance.DataMgr.CurrentPlayerId, frame,
-            // 位置
-            pos[0], pos[1], pos[2],
+            //// 位置
+            //pos[0], pos[1], pos[2],
 
             // 朝向
-            rot[0], rot[1], rot[2], rot[3],
+            rot[0], rot[1], rot[2], rot[3]
 
-            // 缩放比例
-            scl[0], scl[1], scl[2]
+            //// 缩放比例
+            //scl[0], scl[1], scl[2]
         );
     }
 

@@ -190,7 +190,7 @@ public class LocalDwarfController : MonoBehaviour
         Quaternion rot = rb.rotation;
         Vector3 scl = transform.localScale;
 
-        Globals.Instance.NetworkForCS.SnapshotRequest(localFrame, pos, rot, scl);
+        //Globals.Instance.NetworkForCS.SnapshotRequest(localFrame, pos, rot, scl);
     }
 
     // 处理输入

@@ -51,6 +51,7 @@ public class RemoteShooter : MonoBehaviour
     //[SerializeField] Camera cam;
 
     private Renderer renderer;
+    private Cameraholder cameraholder;
     [SerializeField] Material RedMat;
     [SerializeField] Material BlueMat;
 
@@ -80,17 +81,17 @@ public class RemoteShooter : MonoBehaviour
     {
         //ResetFixInput();
         localFrame = Globals.Instance.DataMgr.CurrentFrame;
+        cameraholder = this.GetComponent<Cameraholder>();
         //StartCoroutine(AutoSnapshot());
         //Debug.Log(transform.GetChild(0)+"########################################");
         //Debug.Log(renderer);
     }
 
-    public void HandleSnapshot(int frame, Vector3 pos, Quaternion rot, Vector3 scl)
+    public void HandleSnapshot(int frame, Quaternion rot)
     {
-        Debug.Log("RemoteAction get");
-        // 人物缩放比例
-        transform.localScale = scl;
-        transform.rotation = Quaternion.Slerp(Quaternion.identity, rot, 0.9f);
+        Debug.Log("RemoteAction get:"+rot);
+
+        cameraholder.cameraHolder.transform.rotation = Quaternion.Slerp(Quaternion.identity, rot, 0.5f);
     }
 
     public void AddRemoteAction(int id, int frame, int h, int v, int jump, int sprint, float fx, float fz)
@@ -134,11 +135,11 @@ public class RemoteShooter : MonoBehaviour
         //Debug.Log(renderer.material);
         if(color == 0)
         {
-            renderer.material = RedMat;
+            renderer.material = BlueMat;
         }
         else
         {
-            renderer.material = BlueMat;
+            renderer.material = RedMat;
         }
     }
 

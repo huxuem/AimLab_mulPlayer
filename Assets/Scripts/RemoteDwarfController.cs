@@ -98,33 +98,33 @@ public class RemoteDwarfController : MonoBehaviour
     }
 
     // 处理真正操控这个玩家的客户端发来的Snapshot数据包
-    public void HandleSnapshot(int frame, Vector3 pos, Quaternion rot, Vector3 scl)
-    {
-        // 将发来的Position应用到小人身上，使用SmoothPos()来平滑地修改小人的位置
-        Vector3 posDiff = pos - transform.position; // 位置的差值
-        float posSmoothDuration = 0.4f; // 进行位置平滑的时长
+    //public void HandleSnapshot(int frame, Vector3 pos, Quaternion rot, Vector3 scl)
+    //{
+    //    // 将发来的Position应用到小人身上，使用SmoothPos()来平滑地修改小人的位置
+    //    Vector3 posDiff = pos - transform.position; // 位置的差值
+    //    float posSmoothDuration = 0.4f; // 进行位置平滑的时长
 
-        // addPosSmooth是负责持续处理位置平滑的协程
-        // 由于有新的数据包需要处理，先停止原来的协程
-        if (addPosSmooth != null)
-            StopCoroutine(addPosSmooth);
+    //    // addPosSmooth是负责持续处理位置平滑的协程
+    //    // 由于有新的数据包需要处理，先停止原来的协程
+    //    if (addPosSmooth != null)
+    //        StopCoroutine(addPosSmooth);
 
-        if (posDiff.sqrMagnitude > 10)
-        {
-            // 如果玩家实际位置与预期位置相差过大，则触发强制同步
-            rb.position = pos;
-            rb.velocity = Vector3.zero;
-            Debug.Log("对玩家" + currentPlayerId + "进行强制位置同步");
-        }
-        else
-            // 如果玩家实际位置与预期位置相近，则开一个新协程进行位置平滑
-            // 这个操作可以看成是：在0.4秒内把posDiff均匀地加到玩家的position上
-            addPosSmooth = StartCoroutine(AddPosSmooth(posDiff, posSmoothDuration));
+    //    if (posDiff.sqrMagnitude > 10)
+    //    {
+    //        // 如果玩家实际位置与预期位置相差过大，则触发强制同步
+    //        rb.position = pos;
+    //        rb.velocity = Vector3.zero;
+    //        Debug.Log("对玩家" + currentPlayerId + "进行强制位置同步");
+    //    }
+    //    else
+    //        // 如果玩家实际位置与预期位置相近，则开一个新协程进行位置平滑
+    //        // 这个操作可以看成是：在0.4秒内把posDiff均匀地加到玩家的position上
+    //        addPosSmooth = StartCoroutine(AddPosSmooth(posDiff, posSmoothDuration));
 
-        // 人物缩放比例
-        transform.localScale = scl;
-        transform.rotation = rot;
-    }
+    //    // 人物缩放比例
+    //    transform.localScale = scl;
+    //    transform.rotation = rot;
+    //}
 
     // 协程，负责持续对玩家的位置进行平滑
     IEnumerator AddPosSmooth(Vector3 addPos, float duration)

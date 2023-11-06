@@ -53,7 +53,10 @@ public class NetworkForLua
         {
             // 创建物体
             var playerPrefab = Resources.Load("Player") as GameObject;
-            var player = Object.Instantiate(playerPrefab, pos, Quaternion.identity);
+            //纠正旋转
+            float curRot = color == 0 ? 90 : -90;
+            var player = Object.Instantiate(playerPrefab, pos, Quaternion.Euler(new Vector3(0,curRot,0)));
+
             if (player == null)
             {
                 Debug.Log("创建玩家失败");
@@ -61,7 +64,7 @@ public class NetworkForLua
             }
 
             player.transform.name = "Player_local";
-            player.transform.LookAt(Ready);
+            //player.transform.LookAt(Ready);
 
             // 在玩家列表中注册
             Globals.Instance.DataMgr.AllPlayers.Add(id, player);
@@ -74,13 +77,14 @@ public class NetworkForLua
         else
         {
             var playerPrefab = Resources.Load("PlayerRemote") as GameObject;
-
-            var player1 = Object.Instantiate(playerPrefab, pos, Quaternion.identity);
+            //纠正旋转
+            float curRot = color == 0 ? 90 : -90;
+            var player1 = Object.Instantiate(playerPrefab, pos, Quaternion.Euler(new Vector3(0, curRot, 0)));
 
             if (player1 == null) Debug.Log("创建玩家失败");
 
             player1.transform.name = "Player_remote" + id;
-            player1.transform.LookAt(Ready);
+            //player1.transform.LookAt(Ready);
 
             // 在玩家列表中注册
             Globals.Instance.DataMgr.AllPlayers.Add(id, player1);
@@ -132,7 +136,7 @@ public class NetworkForLua
     }
 
     // 处理其他玩家发来的状态数据
-    public void SnapshotResponse(int id, int frame, double p1, double p2, double p3, double r1, double r2, double r3, double r4, double s1, double s2, double s3)
+    public void SnapshotResponse(int id, int frame, double r1, double r2, double r3, double r4)
     {
         if (id == Globals.Instance.DataMgr.CurrentPlayerId)
         {
@@ -140,15 +144,15 @@ public class NetworkForLua
         }
 
         // 打包数据
-        Vector3 pos = new Vector3((float)p1, (float)p2, (float)p3);
+        //Vector3 pos = new Vector3((float)p1, (float)p2, (float)p3);
         Quaternion rot = new Quaternion((float)r1, (float)r2, (float)r3, (float)r4);
-        Vector3 scl = new Vector3((float)s1, (float)s2, (float)s3);
+        //Vector3 scl = new Vector3((float)s1, (float)s2, (float)s3);
 
         //处理已在线玩家的Snapshot
         if (Globals.Instance.DataMgr.AllPlayers.ContainsKey(id))
         {
             var player = Globals.Instance.DataMgr.AllPlayers[id];
-            player.GetComponent<RemoteShooter>().HandleSnapshot(frame, pos, rot, scl);
+            player.GetComponent<RemoteShooter>().HandleSnapshot(frame, rot);
         }
     }
 
