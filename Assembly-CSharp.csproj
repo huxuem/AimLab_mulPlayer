@@ -836,6 +836,7 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_CompositeCollider2D_GeometryType.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Rendering_AsyncGPUReadbackRequest.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_UI_Image_OriginHorizontal.cs" />
+    <Compile Include="Assets\Travis Game Assets\Hit Impact Effects\Demo Scene\Scripts\HitImpactEffectsPreview.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_CustomRenderTextureUpdateMode.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_ForceMode.cs" />
     <Compile Include="Assets\Slua\LuaObject\Custom\LuaSystem_Func_1_int.cs" />
@@ -1150,7 +1151,6 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_FixedJoint2D.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Rendering_SplashScreen.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_MaterialGlobalIlluminationFlags.cs" />
-    <Compile Include="Assets\Travis Game Assets\Hit Impact Effects\Demo Scene\Scripts\HitImpactEffectsPreview.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
