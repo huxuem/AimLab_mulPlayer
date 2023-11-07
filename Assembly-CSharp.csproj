@@ -580,12 +580,12 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_ShadowProjection.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Animations_TransformSceneHandle.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_AudioLowPassFilter.cs" />
+    <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Rendering_ShaderTagId.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_TextureFormat.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_UI_Image_Type.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_BoneWeight.cs" />
-    <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Rendering_ShaderTagId.cs" />
-    <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_RenderTextureCreationFlags.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_UI_ILayoutGroup.cs" />
+    <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_RenderTextureCreationFlags.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Diagnostics_ForcedCrashCategory.cs" />
     <Compile Include="Assets\Scripts\Shoot\TargetBound.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Events_UnityEventCallState.cs" />
@@ -778,7 +778,7 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\BindUnityAds.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Rendering_PerObjectData.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_U2D_SpriteAtlas.cs" />
-    <Compile Include="Assets\Scripts\Coin.cs" />
+    <Compile Include="Assets\Scripts\Shoot\Coin.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_AudioConfiguration.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Rendering_BuiltinShaderMode.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_EventSystems_EventTrigger.cs" />

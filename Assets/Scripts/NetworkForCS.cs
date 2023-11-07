@@ -112,7 +112,7 @@ public class NetworkForCS
 
     public void RmPlayerHitReq(int id)
     {
-        Debug.Log("RemotePlayerGetHit! :" + id);
+        //Debug.Log("RemotePlayerGetHit! :" + id);
         luaRmPlayerHitReq.call(luaSelf, id);
     }
 }

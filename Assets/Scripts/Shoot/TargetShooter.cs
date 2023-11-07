@@ -7,11 +7,12 @@ using UnityEngine;
 public class TargetShooter : MonoBehaviour
 {
     public int currentPlayerId = -1;
-    public int curSide;
+    //public int curSide;
     [SerializeField] Camera cam;
     [SerializeField] Animator animator;
     private Cameraholder cameraholder;
     private float timer;
+    [SerializeField] float ChangeSideTime = 1f;
 
     private Renderer renderer;
     [SerializeField] Material RedMat;
@@ -175,6 +176,22 @@ public class TargetShooter : MonoBehaviour
         {
             renderer.material = RedMat;
         }
+    }
+
+    public void GetHit()
+    {
+        //Debug.Log("getHit");
+        StartCoroutine(ChangeSideCoroutine());
+    }
+
+    IEnumerator ChangeSideCoroutine()
+    {
+        int curColor = Globals.Instance.DataMgr.CurrentPlayerColor;
+        Globals.Instance.DataMgr.CurrentPlayerColor = (curColor == 0 ? 1 : 0);
+        Debug.Log("ChangeColor:" + Globals.Instance.DataMgr.CurrentPlayerColor);
+        yield return new WaitForSeconds(ChangeSideTime);
+        Globals.Instance.DataMgr.CurrentPlayerColor = curColor;
+        Debug.Log("Color Back");
     }
 
 

@@ -17,7 +17,7 @@ public class NetworkForLua
         Globals.Instance.DataMgr.CurrentPlayerId = id;
         Globals.Instance.DataMgr.CurrentPlayerName = currentPlayerName;
         Globals.Instance.DataMgr.CurrentPlayerColor = color;
-        Debug.Log("Color:" + color);
+        //Debug.Log("Color:" + color);
 
         if (id != -1)
         {
@@ -239,6 +239,18 @@ public class NetworkForLua
     public void PlayerGetHitResponse(int id)
     {
         Debug.Log("player get hit:" + id);
+        if(id == Globals.Instance.DataMgr.CurrentPlayerId)
+        {
+            Globals.Instance.DataMgr.AllPlayers.TryGetValue(id, out var result);
+            if (result != null)
+            {
+                TargetShooter player = result.GetComponent<TargetShooter>();
+                if (player != null)
+                {
+                    player.GetHit();
+                }
+            }
+        }
     }
 
 
