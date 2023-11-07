@@ -75,7 +75,6 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_ForceMode2D.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Security.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\LuaUnityEngine_EventSystems_ExecuteEvents_EventFunction_1_UnityEngine_EventSystems_IDropHandler.cs" />
-    <Compile Include="Assets\Slua\LuaObject\Custom\LuaSystem_Comparison_1_int.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Animations_ParentConstraint.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Collision.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_AvatarIKGoal.cs" />
@@ -167,7 +166,6 @@
     <Compile Include="Assets\Scripts\LocalDwarfController.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Rendering_CullingOptions.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Rendering_TextureDimension.cs" />
-    <Compile Include="Assets\Slua\LuaObject\Custom\LuaSystem_Action_1_int.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Rendering_ComputeQueueType.cs" />
     <Compile Include="Assets\Scripts\RemoteDwarfController.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_EventSystems_RaycastResult.cs" />
@@ -328,7 +326,6 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_UI_IClippable.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_HeadDof.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_UI_ICanvasElement.cs" />
-    <Compile Include="Assets\Slua\LuaObject\Custom\Lua_NetworkForLua.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_LineAlignment.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_Initialization.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_ConfigurableJoint.cs" />
@@ -514,8 +511,6 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_AnisotropicFiltering.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_SceneManagement_SceneUtility.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_ShadowResolution.cs" />
-    <Compile Include="Assets\Slua\LuaObject\Custom\LuaSystem_Action_2_int_Dictionary_System_Int32_object_.cs" />
-    <Compile Include="Assets\Slua\LuaObject\Custom\LuaSystem_Action_2_int_string.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_RenderTargetSetup.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_PostLateUpdate_UpdateCustomRenderTextures.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Profiling_Memory_Experimental_MemoryProfiler.cs" />
@@ -585,7 +580,6 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_ShadowProjection.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Animations_TransformSceneHandle.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_AudioLowPassFilter.cs" />
-    <Compile Include="Assets\Slua\LuaObject\Custom\LuaSystem_Predicate_1_int.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_TextureFormat.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_UI_Image_Type.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_BoneWeight.cs" />
@@ -622,7 +616,6 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Animations_IAnimationWindowPreview.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_PreUpdate_CheckTexFieldInput.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_GraphicsBuffer_IndirectDrawIndexedArgs.cs" />
-    <Compile Include="Assets\Slua\LuaObject\Custom\Lua_System_Collections_Generic_List_1_int.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_PostLateUpdate_ProcessWebSendMessages.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Mesh.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_RectTransform.cs" />
@@ -840,7 +833,6 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_UI_Image_OriginHorizontal.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_CustomRenderTextureUpdateMode.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_ForceMode.cs" />
-    <Compile Include="Assets\Slua\LuaObject\Custom\LuaSystem_Func_1_int.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_WaitForEndOfFrame.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Animations_AnimationSceneHandleUtility.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_PostLateUpdate_DirectorLateUpdate.cs" />
@@ -896,7 +888,6 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_ArticulationDrive.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Profiling_ProfilerArea.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_Update_ScriptRunBehaviourUpdate.cs" />
-    <Compile Include="Assets\Slua\LuaObject\Custom\Lua_System_String.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_ComputeBuffer.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_RenderTextureMemoryless.cs" />
     <Compile Include="Assets\Invector\Scripts\CharacterController\vThirdPersonController.cs" />
@@ -979,7 +970,6 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_FixedUpdate_PhysicsFixedUpdate.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_ImageEffectAfterScale.cs" />
     <Compile Include="Assets\Invector\Scripts\Camera\vThirdPersonCamera.cs" />
-    <Compile Include="Assets\Slua\LuaObject\Custom\Lua_Globals.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_ColorSpace.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_FixedUpdate_ScriptRunDelayedFixedFrameRate.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Profiling_Sampler.cs" />
@@ -1002,7 +992,6 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_EarlyUpdate_ClearIntermediateRenderers.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_PostLateUpdate_GraphicsWarmupPreloadedShaders.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_SoftJointLimitSpring.cs" />
-    <Compile Include="Assets\Slua\LuaObject\Custom\BindCustom.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_EventSystems_ExecuteEvents.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_AnimationCullingType.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_RenderMode.cs" />

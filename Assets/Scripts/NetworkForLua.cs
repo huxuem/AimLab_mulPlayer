@@ -236,6 +236,14 @@ public class NetworkForLua
         }
     }
 
+    public void PlayerGetHitResponse(int id)
+    {
+        Debug.Log("player get hit:" + id);
+    }
+
+
+
+    //#######################################################   已废弃
     public void RemoveCoinResponse(int id, int pickerPlayerId)
     {
         //GameObject tempGo;

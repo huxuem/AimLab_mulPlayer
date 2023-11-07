@@ -137,6 +137,10 @@ local server_rpc = {
 		network_for_lua:AddCoinResponse(args["id"], args["posx"], args["posy"], args["posz"], args["ownSide"], args["isgood"])
 		return true
 	end,
+	rmplayer_hit_bc = function(args)
+		network_for_lua:PlayerGetHitResponse(args["id"])
+		return true
+	end,
 	remove_coin_bc = function(args)
 		network_for_lua:RemoveCoinResponse(args["id"], args["pickerPlayerId"])
 		return true
@@ -219,6 +223,11 @@ end
 
 function class:send_remove_coin_req(i, pickerColor, isGood)
 	send_request("remove_coin_req", { id = i, pickerPlayerColor = pickerColor, isgood = isGood})
+end
+
+
+function class:send_rmplayer_hit_req(i)
+	send_request("rmplayer_hit_req", { id = i})
 end
 
 -------------------------------------

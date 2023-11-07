@@ -62,6 +62,12 @@ remove_coin_req  8 {
 	}
 }
 
+rmplayer_hit_req	9 {
+	request {
+		id 		0 : integer
+	}
+}
+
 
 ]]
 
@@ -160,6 +166,12 @@ remove_coin_bc    11 {
 		id               0 : integer
 		pickerPlayerId   1 : integer
 		isgood		2 : integer
+	}
+}
+
+rmplayer_hit_bc	12 {
+	request {
+		id 		0 : integer
 	}
 }
 

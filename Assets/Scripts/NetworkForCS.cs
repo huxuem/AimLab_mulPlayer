@@ -16,6 +16,8 @@ public class NetworkForCS
     private LuaFunction luaAddCoinReq;
     private LuaFunction luaRemoveCoinReq;
 
+    private LuaFunction luaRmPlayerHitReq;
+
     public void Init()
     {
         // 启动本地Lua服务器
@@ -42,6 +44,8 @@ public class NetworkForCS
 
         luaAddCoinReq = (LuaFunction)luaSelf["send_add_coin_req"];
         luaRemoveCoinReq = (LuaFunction)luaSelf["send_remove_coin_req"];
+
+        luaRmPlayerHitReq = (LuaFunction)luaSelf["send_rmplayer_hit_req"];
     }
     
      public void ConnectToServer()
@@ -104,5 +108,11 @@ public class NetworkForCS
     {
         Debug.Log("color: "+Globals.Instance.DataMgr.CurrentPlayerColor);
         luaRemoveCoinReq.call(luaSelf, id, Globals.Instance.DataMgr.CurrentPlayerColor, isGood);
+    }
+
+    public void RmPlayerHitReq(int id)
+    {
+        Debug.Log("RemotePlayerGetHit! :" + id);
+        luaRmPlayerHitReq.call(luaSelf, id);
     }
 }

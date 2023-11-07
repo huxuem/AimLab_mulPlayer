@@ -10,10 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4379990651739723830}
   - component: {fileID: 4379990651739723825}
-  - component: {fileID: 4379990651739723824}
   m_Layer: 0
   m_Name: Main Camera
-  m_TagString: MainCamera
+  m_TagString: PlayerRemote
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77,14 +76,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &4379990651739723824
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4379990651739723827}
-  m_Enabled: 1
 --- !u!1 &4379990652053270589
 GameObject:
   m_ObjectHideFlags: 0
@@ -98,7 +89,7 @@ GameObject:
   - component: {fileID: -4437616742375343392}
   m_Layer: 0
   m_Name: PlayerRemote
-  m_TagString: Untagged
+  m_TagString: PlayerRemote
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -165,7 +156,7 @@ GameObject:
   - component: {fileID: 4379990652543151094}
   m_Layer: 0
   m_Name: Cameraholder
-  m_TagString: Untagged
+  m_TagString: PlayerRemote
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -200,7 +191,7 @@ GameObject:
   - component: {fileID: 7567977771551932160}
   m_Layer: 0
   m_Name: PlayerShape
-  m_TagString: Untagged
+  m_TagString: PlayerRemote
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -294,6 +285,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: b5742c35cad19b945bc129c719875b2d, type: 3}
       propertyPath: m_Name
       value: Sci-Fi Rifle_fbx
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b5742c35cad19b945bc129c719875b2d, type: 3}
+      propertyPath: m_TagString
+      value: PlayerRemote
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b5742c35cad19b945bc129c719875b2d, type: 3}
       propertyPath: m_RootOrder

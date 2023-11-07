@@ -89,7 +89,7 @@ public class RemoteShooter : MonoBehaviour
 
     public void HandleSnapshot(int frame, Quaternion rot)
     {
-        Debug.Log("RemoteAction get:"+rot);
+        //Debug.Log("RemoteAction get:"+rot);
 
         cameraholder.cameraHolder.transform.rotation = Quaternion.Slerp(Quaternion.identity, rot, 0.5f);
     }
@@ -99,30 +99,10 @@ public class RemoteShooter : MonoBehaviour
         //Debug.Log("facex/z: " + fx + " " + fz);
     }
 
-    //#region SnapShot
-    //IEnumerator AutoSnapshot()
-    //{
-    //    while (true)
-    //    {
-    //        // SendLocalSnapshot();
-    //        SendSnapshot();
-    //        float waitTime = UnityEngine.Random.Range(0.2f, 0.4f);
-    //        yield return new WaitForSeconds(waitTime);
-    //    }
-    //}
-
-    //// 发送本机玩家状态，要改成只发送旋转
-    //void SendSnapshot()
-    //{
-    //    Vector3 pos = transform.position;
-    //    Quaternion rot = transform.rotation;
-    //    Vector3 scl = transform.localScale;
-
-    //    Globals.Instance.NetworkForCS.SnapshotRequest(localFrame, pos, rot, scl);
-    //}
-
-    //#endregion
-
+    public void Hit()
+    {
+        Globals.Instance.NetworkForCS.RmPlayerHitReq(currentPlayerId);
+    }
 
 
     public void SetColor(int color)

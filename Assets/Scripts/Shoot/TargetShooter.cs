@@ -93,7 +93,7 @@ public class TargetShooter : MonoBehaviour
         
         if(Input.GetMouseButtonDown(0)&& Time.time>timer+0.1f)
         {
-            //Debug.Log("Click");
+            //射击判断的逻辑
             Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f));
             if(Physics.Raycast(ray,out RaycastHit hit))
             {
@@ -116,6 +116,16 @@ public class TargetShooter : MonoBehaviour
                         //Debug.Log("Hit!");
                         target.Hit();
                     }
+                }
+                else if (hit.collider.CompareTag("PlayerRemote"))
+                {
+                    //射线都是打到playershape上的
+                    RemoteShooter RmPlayer = hit.collider.gameObject.GetComponentInParent<RemoteShooter>();
+                    if (RmPlayer != null)
+                    {
+                        RmPlayer.Hit();
+                    }
+                    else Debug.Log("击中的rmplayer没有Remoteshooter！"+hit.collider.gameObject);
                 }
 
 
