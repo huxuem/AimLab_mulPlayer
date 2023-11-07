@@ -202,6 +202,8 @@ public class NetworkForLua
                     }
                     Debug.Log("RedScore: " + Globals.Instance.DataMgr.RedScore);
                 }
+                //更新UI
+                Gamemanager.instance.UpdateScore(Globals.Instance.DataMgr.RedScore, Globals.Instance.DataMgr.BlueScore);
             }
         }
         else

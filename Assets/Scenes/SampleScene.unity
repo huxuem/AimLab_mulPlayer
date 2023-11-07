@@ -938,7 +938,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 10
+  m_Text: 0
 --- !u!222 &74710846
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4140,7 +4140,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 10
+  m_Text: 0
 --- !u!222 &405335200
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15253,6 +15253,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 4658884367336168546, guid: ffde44d79b212034f8e75aa3d63c02b9, type: 3}
   faketarget: {fileID: 4658884367336168546, guid: 9ac3a34ccca488a44ac868eeff0b6553, type: 3}
+  Red: {fileID: 74710845}
+  Blue: {fileID: 405335199}
   Count1: 5
   Count2: 2
 --- !u!1001 &1656208338
