@@ -141,6 +141,10 @@ local server_rpc = {
 		network_for_lua:PlayerGetHitResponse(args["id"])
 		return true
 	end,
+	change_state_bc = function(args)
+		network_for_lua:ChangeStateResponse(args["state"])
+		return true
+	end,
 	remove_coin_bc = function(args)
 		network_for_lua:RemoveCoinResponse(args["id"], args["pickerPlayerId"])
 		return true
@@ -228,6 +232,10 @@ end
 
 function class:send_rmplayer_hit_req(i)
 	send_request("rmplayer_hit_req", { id = i})
+end
+
+function class:send_change_state_req(i)
+	send_request("change_state_req", { state = i})
 end
 
 -------------------------------------

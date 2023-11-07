@@ -115,13 +115,7 @@ public class NetworkForLua
     public void ActionResponse(int id, int frame, int inputH, int inputV, int inputJump, int inputS, float fx, float fz)
     {
 
-        //// 检查玩家是否存在、是否是其他玩家
-        //if (Globals.Instance.DataMgr.AllPlayers.ContainsKey(id) && id != Globals.Instance.DataMgr.CurrentPlayerId)
-        //{
-        //    // 将数据包转交给RemoteDwarfController脚本进行处理
-        //    var player = Globals.Instance.DataMgr.AllPlayers[id];
-        //    player.GetComponent<RemoteShooter>().AddRemoteAction(id, frame, inputH, inputV, inputJump, inputS, fx, fz);
-        //}
+
     }
 
     // 处理服务器定时发送的全局同步请求
@@ -167,6 +161,8 @@ public class NetworkForLua
             if (null != tempGo)
             {
                 Debug.Log("TargetID: " + id);
+                int BlueChange = 0;
+                int RedChange = 0;
                 //把原有的球改位置，且知道是谁打的
 
                 if (pickSide == 0)
@@ -175,15 +171,14 @@ public class NetworkForLua
                     {
                         Coin tmpCoin = tempGo.GetComponent<Coin>();
                         tmpCoin.changePos(new Vector3(x, y, z));
-                        Globals.Instance.DataMgr.BlueScore += 1;
+                        BlueChange= 1;
                     }
                     else if(isGood == 0)
                     {
                         Coin_Bad tmpCoinBad = tempGo.GetComponent<Coin_Bad>();
                         tmpCoinBad.changePos(new Vector3(x, y, z));
-                        Globals.Instance.DataMgr.BlueScore -= 1;
+                        BlueChange = -1;
                     }
-                    Debug.Log("BlueScore: " + Globals.Instance.DataMgr.BlueScore);
 
                 }
                 else if(pickSide == 1)
@@ -192,18 +187,23 @@ public class NetworkForLua
                     {
                         Coin tmpCoin = tempGo.GetComponent<Coin>();
                         tmpCoin.changePos(new Vector3(x, y, z));
-                        Globals.Instance.DataMgr.RedScore += 1;
+                        RedChange= 1;
                     }
                     else if (isGood == 0)
                     {
                         Coin_Bad tmpCoinBad = tempGo.GetComponent<Coin_Bad>();
                         tmpCoinBad.changePos(new Vector3(x, y, z));
-                        Globals.Instance.DataMgr.RedScore -= 1;
+                        RedChange= -1;
                     }
-                    Debug.Log("RedScore: " + Globals.Instance.DataMgr.RedScore);
                 }
-                //更新UI
-                Gamemanager.instance.UpdateScore(Globals.Instance.DataMgr.RedScore, Globals.Instance.DataMgr.BlueScore);
+
+                if(Gamemanager.instance.State == 1)//只有游玩状态能改分数
+                {
+                    Globals.Instance.DataMgr.YellowScore += BlueChange;
+                    Globals.Instance.DataMgr.GreenScore += RedChange;
+                    //更新UI
+                    Gamemanager.instance.UpdateScore(Globals.Instance.DataMgr.GreenScore, Globals.Instance.DataMgr.YellowScore);
+                }
             }
         }
         else
@@ -253,6 +253,12 @@ public class NetworkForLua
                 }
             }
         }
+    }
+
+    public void ChangeStateResponse(int state)
+    {
+        Debug.Log("curstate:"+state);
+        Gamemanager.instance.ChangeState(state);
     }
 
 

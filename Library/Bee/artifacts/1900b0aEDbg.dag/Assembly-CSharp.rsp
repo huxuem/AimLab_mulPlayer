@@ -353,6 +353,7 @@
 "Assets/Invector/Scripts/Generic/Utils/vComment.cs"
 "Assets/Invector/Scripts/Generic/Utils/vExtensions.cs"
 "Assets/Invector/Scripts/Generic/Utils/vPickupItem.cs"
+"Assets/SameText.cs"
 "Assets/SciFi Warehouse Kit/Demo/Scripts/LightFlicker.cs"
 "Assets/SciFi Warehouse Kit/Demo/Scripts/MouseComponent.cs"
 "Assets/SciFi Warehouse Kit/Demo/Scripts/PlayerMovement.cs"
@@ -1429,6 +1430,7 @@
 "Assets/TextMesh Pro/Examples & Extras/Scripts/VertexShakeB.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/VertexZoom.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/WarpTextExample.cs"
+"Assets/Travis Game Assets/Hit Impact Effects/Demo Scene/Scripts/HitImpactEffectsPreview.cs"
 -langversion:9.0
 
 /deterministic

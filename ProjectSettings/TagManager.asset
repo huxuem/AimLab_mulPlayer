@@ -12,6 +12,7 @@ TagManager:
   - TargetGood
   - TargetBad
   - PlayerRemote
+  - Ready
   layers:
   - Default
   - TransparentFX

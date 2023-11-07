@@ -1,6 +1,7 @@
 using Invector.vCharacterController;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 //using UnityEngine.Windows;
 
@@ -15,11 +16,12 @@ public class TargetShooter : MonoBehaviour
     [SerializeField] float ChangeSideTime = 1f;
 
     private Renderer renderer;
-    [SerializeField] Material RedMat;
-    [SerializeField] Material BlueMat;
+    [SerializeField] Material GreeMat;
+    [SerializeField] Material YelloScore;
 
     public Cameraholder Cameraholder;
-    private GameObject ready;
+    public GameObject ready,gameover,newHits;
+    public AudioSource Shoot,ShootOpp,Shoot1;
 
     #region Variables
 
@@ -106,6 +108,10 @@ public class TargetShooter : MonoBehaviour
                     if (target != null)
                     {
                         //Debug.Log("Hit!");
+                        Shoot.Play();
+                        Debug.Log("Hit!");
+                        GameObject spawnedHit = Instantiate(newHits, hit.point, Quaternion.identity);
+                        spawnedHit.transform.LookAt(Camera.main.transform);
                         target.Hit();
                     }
                 }
@@ -114,7 +120,10 @@ public class TargetShooter : MonoBehaviour
                     Coin_Bad target = hit.collider.gameObject.GetComponent<Coin_Bad>();
                     if (target != null)
                     {
-                        //Debug.Log("Hit!");
+                        Shoot.Play();
+                        Debug.Log("Hit!");
+                        GameObject spawnedHit = Instantiate(newHits, hit.point, Quaternion.identity);
+                        spawnedHit.transform.LookAt(Camera.main.transform);
                         target.Hit();
                     }
                 }
@@ -124,32 +133,57 @@ public class TargetShooter : MonoBehaviour
                     RemoteShooter RmPlayer = hit.collider.gameObject.GetComponentInParent<RemoteShooter>();
                     if (RmPlayer != null)
                     {
+                        ShootOpp.Play();
                         RmPlayer.Hit();
                     }
                     else Debug.Log("击中的rmplayer没有Remoteshooter！"+hit.collider.gameObject);
                 }
 
 
-                //这里用的是target而非coin，暂时锁掉
-
                 switch (hit.collider.gameObject.name)
                 {
+                    case "Ready":
+                        //Debug.Log("changestate:1");
+                        Globals.Instance.NetworkForCS.ChangeStateReq(1);
+                        hit.collider.gameObject.SetActive(false);
+                        break;
+                    case "Ready1":
+                        //Debug.Log("changestate:1");
+                        Globals.Instance.NetworkForCS.ChangeStateReq(1);
+                        hit.collider.gameObject.SetActive(false);
+                        break;
                     case "+":
                         Cameraholder.DPI += 0.1f;
+                        Shoot1.Play();
                         break;
                     case "-":
                         Cameraholder.DPI -= 0.1f;
+                        Shoot1.Play();
                         break;
                     case "++":
                         Cameraholder.DPI += 0.5f;
+                        Shoot1.Play();
                         break;
                     case "--":
                         Cameraholder.DPI -= 0.5f;
+                        Shoot1.Play();
                         break;
-                    case "Ready":
-                        //ready.SetActive(false);
+                    case "Exit":
+                        Application.Quit();
                         break;
-                    default: break;
+                    case "Exit1":
+                        Application.Quit();
+                        break;
+                    case "Restart":
+                        Shoot1.Play();
+                        Globals.Instance.NetworkForCS.ChangeStateReq(0);
+                        break;
+                    case "Restart1":
+                        Shoot1.Play();
+                        Globals.Instance.NetworkForCS.ChangeStateReq(0);
+                        break;
+                    default:
+                        break;
                 }
                 //Debug.Log("DPI:" + Cameraholder.DPI);
 
@@ -166,15 +200,15 @@ public class TargetShooter : MonoBehaviour
         //Debug.Log(renderer);
         //Debug.Log("SetColor: " + renderer.material+" color:"+color);
         renderer = transform.GetChild(0).GetComponent<Renderer>();
-        //renderer.material = (color == 0 ? RedMat : BlueMat);
+        //renderer.material = (color == 0 ? RedMat : YelloScore);
         //Debug.Log(renderer.material);
         if(color == 0)
         {
-            renderer.material = BlueMat;
+            renderer.material = YelloScore;
         }
         else
         {
-            renderer.material = RedMat;
+            renderer.material = GreeMat;
         }
     }
 
@@ -189,9 +223,15 @@ public class TargetShooter : MonoBehaviour
         int curColor = Globals.Instance.DataMgr.CurrentPlayerColor;
         Globals.Instance.DataMgr.CurrentPlayerColor = (curColor == 0 ? 1 : 0);
         Debug.Log("ChangeColor:" + Globals.Instance.DataMgr.CurrentPlayerColor);
+
+        Gamemanager.instance.PlayerGetHitUI(true);
+
         yield return new WaitForSeconds(ChangeSideTime);
+
         Globals.Instance.DataMgr.CurrentPlayerColor = curColor;
         Debug.Log("Color Back");
+
+        Gamemanager.instance.PlayerGetHitUI(false);
     }
 
 

@@ -52,8 +52,8 @@ public class RemoteShooter : MonoBehaviour
 
     private Renderer renderer;
     private Cameraholder cameraholder;
-    [SerializeField] Material RedMat;
-    [SerializeField] Material BlueMat;
+    [SerializeField] Material GreeMat;
+    [SerializeField] Material YelloMat;
 
 
 
@@ -111,15 +111,15 @@ public class RemoteShooter : MonoBehaviour
         //Debug.Log(renderer);
         //Debug.Log("SetColor: " + renderer.material+" color:"+color);
         renderer = transform.GetChild(0).GetComponent<Renderer>();
-        //renderer.material = (color == 0 ? RedMat : BlueMat);
+        //renderer.material = (color == 0 ? GreeMat : YelloMat);
         //Debug.Log(renderer.material);
         if(color == 0)
         {
-            renderer.material = BlueMat;
+            renderer.material = YelloMat;
         }
         else
         {
-            renderer.material = RedMat;
+            renderer.material = GreeMat;
         }
     }
 

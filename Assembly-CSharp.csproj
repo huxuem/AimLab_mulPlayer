@@ -515,6 +515,7 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_PostLateUpdate_UpdateCustomRenderTextures.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Profiling_Memory_Experimental_MemoryProfiler.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_UI_InputField.cs" />
+    <Compile Include="Assets\SameText.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_PlayerLoop_FixedUpdate_Physics2DFixedUpdate.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Texture3D.cs" />
@@ -831,6 +832,7 @@
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_CompositeCollider2D_GeometryType.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_Rendering_AsyncGPUReadbackRequest.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_UI_Image_OriginHorizontal.cs" />
+    <Compile Include="Assets\Travis Game Assets\Hit Impact Effects\Demo Scene\Scripts\HitImpactEffectsPreview.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_CustomRenderTextureUpdateMode.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_ForceMode.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\Lua_UnityEngine_WaitForEndOfFrame.cs" />
@@ -1154,6 +1156,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\Travis Game Assets\Hit Impact Effects\Readme.txt" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />

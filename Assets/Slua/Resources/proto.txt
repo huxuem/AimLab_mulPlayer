@@ -67,6 +67,11 @@ rmplayer_hit_req	9 {
 		id 		0 : integer
 	}
 }
+change_state_req	10 {
+	request {
+		state 		0 : integer
+	}
+}
 
 
 ]]
@@ -172,6 +177,11 @@ remove_coin_bc    11 {
 rmplayer_hit_bc	12 {
 	request {
 		id 		0 : integer
+	}
+}
+change_state_bc	13 {
+	request {
+		state 		0 : integer
 	}
 }
 

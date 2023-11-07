@@ -17,6 +17,8 @@ public class NetworkForCS
     private LuaFunction luaRemoveCoinReq;
 
     private LuaFunction luaRmPlayerHitReq;
+    private LuaFunction luaChangeStateReq;
+
 
     public void Init()
     {
@@ -46,6 +48,7 @@ public class NetworkForCS
         luaRemoveCoinReq = (LuaFunction)luaSelf["send_remove_coin_req"];
 
         luaRmPlayerHitReq = (LuaFunction)luaSelf["send_rmplayer_hit_req"];
+        luaChangeStateReq = (LuaFunction)luaSelf["send_change_state_req"];
     }
     
      public void ConnectToServer()
@@ -87,14 +90,7 @@ public class NetworkForCS
     public void SnapshotRequest(int frame, Quaternion rot)
     {
         luaSnapshot.call(luaSelf, Globals.Instance.DataMgr.CurrentPlayerId, frame,
-            //// 位置
-            //pos[0], pos[1], pos[2],
-
-            // 朝向
             rot[0], rot[1], rot[2], rot[3]
-
-            //// 缩放比例
-            //scl[0], scl[1], scl[2]
         );
     }
 
@@ -114,5 +110,12 @@ public class NetworkForCS
     {
         //Debug.Log("RemotePlayerGetHit! :" + id);
         luaRmPlayerHitReq.call(luaSelf, id);
+    }
+
+    public void ChangeStateReq(int state)
+    {
+        //state=0为ready，state=1为正常的游戏进程，state=2为游戏结束
+        //对state返回的更改写在gamemanager？
+        luaChangeStateReq.call(luaSelf, state);
     }
 }
