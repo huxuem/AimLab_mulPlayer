@@ -134,7 +134,7 @@ local server_rpc = {
 	end,
 	add_coin_bc = function(args)
 		--print("args[\"ownSide\"]:"..args["ownSide"])
-		network_for_lua:AddCoinResponse(args["id"], args["posx"], args["posy"], args["posz"], args["ownSide"], args["isgood"])
+		network_for_lua:AddCoinResponse(args["id"], args["posx"], args["posy"], args["posz"], args["ownSide"], args["isgood"], args["ischanged"])
 		return true
 	end,
 	rmplayer_hit_bc = function(args)
@@ -225,8 +225,8 @@ function class:send_add_coin_req(x, y, z, ownerId)
 	send_request("add_coin_req", { posx = x, posy = y, posz = z, ownerPlayerId = ownerId })
 end
 
-function class:send_remove_coin_req(i, pickerColor, isGood)
-	send_request("remove_coin_req", { id = i, pickerPlayerColor = pickerColor, isgood = isGood})
+function class:send_remove_coin_req(i, pickerColor, isGood, isChanged)
+	send_request("remove_coin_req", { id = i, pickerPlayerColor = pickerColor, isgood = isGood, ischanged = isChanged})
 end
 
 

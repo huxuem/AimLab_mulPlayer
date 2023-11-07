@@ -59,6 +59,7 @@ remove_coin_req  8 {
 		id               0 : integer
 		pickerPlayerColor   1 : integer
 		isgood		2 : integer
+		ischanged	3 : boolean
 	}
 }
 
@@ -163,6 +164,7 @@ add_coin_bc    10 {
 		posz             3 : double
 		ownSide    4 : integer
 		isgood		5 : integer
+		ischanged	6 : boolean
 	}
 }
 

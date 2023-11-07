@@ -150,7 +150,7 @@ public class NetworkForLua
         }
     }
 
-    public void AddCoinResponse(int id, float x, float y, float z, int pickSide, int isGood)
+    public void AddCoinResponse(int id, float x, float y, float z, int pickSide, int isGood, bool isChanged)
     {
         //Debug.Log("addCoinStart");
 
@@ -161,8 +161,8 @@ public class NetworkForLua
             if (null != tempGo)
             {
                 Debug.Log("TargetID: " + id);
-                int BlueChange = 0;
-                int RedChange = 0;
+                int YellowChange = 0;
+                int GreenChange = 0;
                 //把原有的球改位置，且知道是谁打的
 
                 if (pickSide == 0)
@@ -171,13 +171,13 @@ public class NetworkForLua
                     {
                         Coin tmpCoin = tempGo.GetComponent<Coin>();
                         tmpCoin.changePos(new Vector3(x, y, z));
-                        BlueChange= 1;
+                        YellowChange= 1;
                     }
                     else if(isGood == 0)
                     {
                         Coin_Bad tmpCoinBad = tempGo.GetComponent<Coin_Bad>();
                         tmpCoinBad.changePos(new Vector3(x, y, z));
-                        BlueChange = -1;
+                        YellowChange = -1;
                     }
 
                 }
@@ -187,22 +187,30 @@ public class NetworkForLua
                     {
                         Coin tmpCoin = tempGo.GetComponent<Coin>();
                         tmpCoin.changePos(new Vector3(x, y, z));
-                        RedChange= 1;
+                        GreenChange= 1;
                     }
                     else if (isGood == 0)
                     {
                         Coin_Bad tmpCoinBad = tempGo.GetComponent<Coin_Bad>();
                         tmpCoinBad.changePos(new Vector3(x, y, z));
-                        RedChange= -1;
+                        GreenChange= -1;
                     }
                 }
 
                 if(Gamemanager.instance.State == 1)//只有游玩状态能改分数
                 {
-                    Globals.Instance.DataMgr.YellowScore += BlueChange;
-                    Globals.Instance.DataMgr.GreenScore += RedChange;
+                    Globals.Instance.DataMgr.YellowScore += YellowChange;
+                    Globals.Instance.DataMgr.GreenScore += GreenChange;
+                    if (isChanged)
+                    {
+                        Globals.Instance.DataMgr.YellowSteal += YellowChange;
+                        Globals.Instance.DataMgr.GreenSteal += GreenChange;
+                        //Debug.Log("YelloSteal:" + Globals.Instance.DataMgr.YellowSteal + ", GreeSteal:" + Globals.Instance.DataMgr.GreenSteal);
+                    }
                     //更新UI
-                    Gamemanager.instance.UpdateScore(Globals.Instance.DataMgr.GreenScore, Globals.Instance.DataMgr.YellowScore);
+                    Gamemanager.instance.UpdateScore(
+                        Globals.Instance.DataMgr.GreenScore, Globals.Instance.DataMgr.YellowScore,
+                         Globals.Instance.DataMgr.GreenSteal, Globals.Instance.DataMgr.YellowSteal);
                 }
             }
         }

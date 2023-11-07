@@ -222,6 +222,7 @@ public class TargetShooter : MonoBehaviour
     {
         int curColor = Globals.Instance.DataMgr.CurrentPlayerColor;
         Globals.Instance.DataMgr.CurrentPlayerColor = (curColor == 0 ? 1 : 0);
+        Globals.Instance.DataMgr.IsChanged= true;
         Debug.Log("ChangeColor:" + Globals.Instance.DataMgr.CurrentPlayerColor);
 
         Gamemanager.instance.PlayerGetHitUI(true);
@@ -229,6 +230,7 @@ public class TargetShooter : MonoBehaviour
         yield return new WaitForSeconds(ChangeSideTime);
 
         Globals.Instance.DataMgr.CurrentPlayerColor = curColor;
+        Globals.Instance.DataMgr.IsChanged = false;
         Debug.Log("Color Back");
 
         Gamemanager.instance.PlayerGetHitUI(false);

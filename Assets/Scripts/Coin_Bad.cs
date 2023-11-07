@@ -24,7 +24,7 @@ public class Coin_Bad : MonoBehaviour
     public void Hit()
     {
         Debug.Log("HitFake");
-        Globals.Instance.NetworkForCS.RemoveCoinReq(CoinId, isGood);
+        Globals.Instance.NetworkForCS.RemoveCoinReq(CoinId, isGood, Globals.Instance.DataMgr.IsChanged);
     }
 
 }

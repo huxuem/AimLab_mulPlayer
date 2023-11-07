@@ -29,10 +29,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -55,6 +53,7 @@ ScriptsOnlyBuild:
     - TMPro.FaceInfo_Legacy
     - TMPro.FontAssetCreationSettings
     - TMPro.KerningTable
+    - TMPro.TMP_Character
     - TMPro.TMP_FontFeatureTable
     - TMPro.TMP_FontWeightPair
     - TMPro.TMP_Sprite
@@ -68,6 +67,7 @@ ScriptsOnlyBuild:
     - UnityEngine.Events.PersistentListenerMode
     UnityEngine.TextCoreFontEngineModule:
     - UnityEngine.TextCore.FaceInfo
+    - UnityEngine.TextCore.Glyph
     - UnityEngine.TextCore.GlyphMetrics
     - UnityEngine.TextCore.GlyphRect
     UnityEngine.UI:
@@ -183,7 +183,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9604}
     - Class: 114
-      Script: {instanceID: 33052}
+      Script: {instanceID: 25148}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -1412,7 +1412,7 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
-      Hash: 4d222294bbd62d3bce32532df0cd174b
+      Hash: 71b225468d0672a4567b1ad210d8f36a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Gamemanager

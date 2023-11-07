@@ -23,7 +23,7 @@ public class Coin : MonoBehaviour
 
     public void Hit()
     {
-        Globals.Instance.NetworkForCS.RemoveCoinReq(CoinId, isGood);
+        Globals.Instance.NetworkForCS.RemoveCoinReq(CoinId, isGood, Globals.Instance.DataMgr.IsChanged);
     }
 
 }

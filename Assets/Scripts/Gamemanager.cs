@@ -8,7 +8,7 @@ public class Gamemanager : MonoBehaviour
     public static Gamemanager instance;
 
     [SerializeField]  GameObject target, faketarget;
-    [SerializeField] Text Red, Blue, Timer;
+    [SerializeField] Text Green, Yellow, Greensteal, Yellowsteal, Timer;
     [SerializeField] GameObject HitUI;
     [SerializeField] GameObject Ready_1, Ready_2, Exit_1, Restart_1, Exit_2, Restart_2;
     //public float Count1, Count2;
@@ -30,11 +30,13 @@ public class Gamemanager : MonoBehaviour
         Cursor.visible = false;
     }
 
-    public void UpdateScore(int GreenScore, int YellowScore)
+    public void UpdateScore(int GreenScore, int YellowScore, int GreenSteal, int YellowSteal)
     {
         Debug.Log("UpdateScore");
-        Red.text = GreenScore.ToString();
-        Blue.text = YellowScore.ToString();
+        Green.text = GreenScore.ToString();
+        Yellow.text = YellowScore.ToString();
+        Greensteal.text = GreenSteal.ToString();
+        Yellowsteal.text = YellowSteal.ToString();
     }
 
     public void PlayerGetHitUI(bool isHit)
